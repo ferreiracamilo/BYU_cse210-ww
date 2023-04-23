@@ -6,23 +6,27 @@ public class Entry{
     public DateTime _date;
 
     public Entry(string prompt, string reply){
+        //This is utilized while writing a new entry
         _prompt = prompt;
         _reply = reply;
         _date = DateTime.Now;
     }
 
     public Entry(string date, string prompt, string reply){
+        //This is utilized to load an entry from the csv
         _prompt = prompt;
         _reply = reply;
         _date = DateTime.Parse(date);
     }
 
     public override string ToString(){
+        //Instead of creating the Display method I preferred to override the ToString
         string entryFormatted = $"Date: {_date.ToShortDateString()} - Prompt: {_prompt} \n{_reply}";
         return entryFormatted;
     }
 
     public static string RandomPrompt(){
+        //Create static method to utilize even without variable created which makes sense for this
         Random rd = new Random();
         int randNum = rd.Next(1,5);
         Dictionary<int, string> dictPrompts = new Dictionary<int, string>(){

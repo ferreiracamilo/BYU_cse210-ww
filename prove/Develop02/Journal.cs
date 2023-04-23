@@ -15,8 +15,7 @@ public class Journal{
 
         using (StreamWriter outputFile = new StreamWriter(filename)){
             foreach(Entry entry in _entries){
-                //outputFile.WriteLine($"{entry}");
-                outputFile.WriteLine($"{entry._date},{entry._prompt},{entry._reply}");
+                outputFile.WriteLine($"{entry._date},{entry._prompt},{entry._reply}"); //save with commas to read it later with LoadJournal to build the objects
             }
         }
         Console.WriteLine("Your prompt/s were saved into a txt file");
@@ -28,9 +27,6 @@ public class Journal{
 
         foreach (string line in lines){
             string[] parts = line.Split(",");
-
-            // string firstName = parts[0];
-            // string lastName = parts[1];
             Entry newEntry = new Entry(parts[0],parts[1],parts[2]);
             Console.WriteLine(newEntry);
         }
