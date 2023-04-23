@@ -18,7 +18,7 @@ public class Journal{
                 outputFile.WriteLine($"{entry._date},{entry._prompt},{entry._reply}"); //save with commas to read it later with LoadJournal to build the objects
             }
         }
-        Console.WriteLine("Your prompt/s were saved into a txt file");
+        Console.WriteLine("Your prompt/s were saved into a csv file\n");
     }
 
     public void LoadJournal(){
