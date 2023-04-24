@@ -1,10 +1,4 @@
-//STORES --> Reference (John 3:16) & text of scripture
-
-// Proverbs 3:5-6
-// Proverbs = Book
-// 3 = Chapter
-// 5-6 Versiculos
-
+using System.Text.RegularExpressions;
 public class Scripture{
     private List<Passage> _passages = new List<Passage>();
 
@@ -76,7 +70,11 @@ public class Scripture{
     /// </summary>
     public static string ReplaceRandomWordsForUnderscores(string phrase){
         //This method is intended to be utilized outside the class without relation to a specific object
-
+        bool containsOtherThanUnderscoreAndSpaces = Regex.IsMatch(phrase, @"[^_\s]");
+        if(!containsOtherThanUnderscoreAndSpaces){
+            Console.WriteLine("You hid all words from scripture.");
+            Environment.Exit(0);
+        }
         // Split the phrase into words
         string[] words = phrase.Split(' ');
 
