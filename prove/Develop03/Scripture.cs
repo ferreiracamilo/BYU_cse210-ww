@@ -70,6 +70,7 @@ public class Scripture{
     /// </summary>
     public static string ReplaceRandomWordsForUnderscores(string phrase){
         //This method is intended to be utilized outside the class without relation to a specific object
+        
         bool containsOtherThanUnderscoreAndSpaces = Regex.IsMatch(phrase, @"[^_\s]");
         if(!containsOtherThanUnderscoreAndSpaces){
             Console.WriteLine("You hid all words from scripture.");
