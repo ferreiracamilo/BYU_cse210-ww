@@ -71,6 +71,9 @@ public class Scripture{
         return resVerses;
     }
 
+    /// <summary>
+    /// It will provide a new string exchanging some word for underscores > this apply only to words which don't contain underscore
+    /// </summary>
     public static string ReplaceRandomWordsForUnderscores(string phrase){
         //This method is intended to be utilized outside the class without relation to a specific object
 

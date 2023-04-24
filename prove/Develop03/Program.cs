@@ -32,14 +32,20 @@ class Program{
         scripts.Add(script2);
         scripts.Add(script3);
 
-        Console.WriteLine(script3.GetReferences());
-        string verseSample = script3.GetVerses();
-        Console.WriteLine(verseSample);
-        verseSample = Scripture.ReplaceRandomWordsForUnderscores(verseSample);
-        Console.WriteLine(verseSample);
-        verseSample = Scripture.ReplaceRandomWordsForUnderscores(verseSample);
-        Console.WriteLine(verseSample);
-        verseSample = Scripture.ReplaceRandomWordsForUnderscores(verseSample);
-        Console.WriteLine(verseSample);
+        string option = "";
+        Random random = new Random();
+        int index = random.Next(scripts.Count);
+        string reference = scripts[index].GetReferences();
+        string verse = scripts[index].GetVerses();
+        int counter = 0;
+        do{
+            if(counter > 0){
+                verse = Scripture.ReplaceRandomWordsForUnderscores(verse);
+            }
+            Console.WriteLine($"\n{reference} {verse}");
+            Console.Write("\nPress enter to continue or type 'quit' to finish:");
+            option = Console.ReadLine();
+            counter++;
+        }while(!option.ToLower().Equals("quit"));
     }
 }
