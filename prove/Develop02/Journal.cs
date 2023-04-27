@@ -11,7 +11,7 @@ public class Journal{
     }
 
     public void SaveJournal(){
-        string filename = "myFile.csv";
+        string filename = "myFile.txt";
 
         using (StreamWriter outputFile = new StreamWriter(filename)){
             foreach(Entry entry in _entries){
@@ -22,7 +22,7 @@ public class Journal{
     }
 
     public void LoadJournal(){
-        string filename = "myFile.csv";
+        string filename = "myFile.txt";
         string[] lines = System.IO.File.ReadAllLines(filename);
 
         foreach (string line in lines){
