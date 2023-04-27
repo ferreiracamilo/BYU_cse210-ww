@@ -36,6 +36,13 @@ public class Entry{
             {4, "Did I try hard enough?"},
             {5, "How did I see the hand of the Lord in my life today?"}
         };
+        /*
+            // This could achieved as well by
+            Random rd = new Random();
+            int randNum = rd.Next(0,4);
+            List<string> listPrompts = new List<string> { "What would I do better today?", "What's my best achivement today?", "What was the best part of my day?", "Did I try hard enough?", "How did I see the hand of the Lord in my life today?"};
+            return listPrompts[randNum];
+        */
         return dictPrompts[randNum];
     }
 }
