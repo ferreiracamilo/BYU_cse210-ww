@@ -18,7 +18,6 @@ public class Scripture{
                 throw new ArgumentException("Some of the passages from argument don't belong to same book and/or chapter");
             }
         }
-        //_passages.AddRange(passages);
         _passages = passages;
     }
 
