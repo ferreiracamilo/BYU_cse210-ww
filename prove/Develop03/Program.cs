@@ -38,7 +38,6 @@ class Program{
         string reference = scripts[index].GetReferences();
         string verse = scripts[index].GetVerses();
         int counter = 0;
-        // verse = "_______ ___________";
         do{
             if(counter > 0){
                 verse = Scripture.ReplaceRandomWordsForUnderscores(verse);
