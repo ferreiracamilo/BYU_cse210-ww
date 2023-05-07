@@ -3,8 +3,9 @@ using System;
 class Program
 {
     static void Main(string[] args)
-    {
+    {   
         int option = 0;
+        List<int> parameters = new List<int>();
 
         BreathingActivity breathingActivity = new BreathingActivity("Breathing Activity", "This activity will help you relax by walking your through breathing in and out slowly. Clear your mind and focus on your breathing.");
         ReflectionActivity reflectionActivity = new ReflectionActivity("da","da");
@@ -15,22 +16,21 @@ class Program
             if(option != 4){
                 switch(option){
                     case 1:
-                        breathingActivity.WelcomeMessage();
-                        //esto
+                        parameters = breathingActivity.WelcomeMessage();
+                        Console.WriteLine("a"); 
                         break;
                     case 2:
                         // reflectionActivity.WelcomeMessage();
                         //esto
                         break;
                     case 3:
-                        listingActivity.WelcomeMessage();
+                        //
                         //esto
                         break;
                 }
             }
             Thread.Sleep(10);
         }while(option != 4);
-        
     }
 
     public static int printMenu(){
