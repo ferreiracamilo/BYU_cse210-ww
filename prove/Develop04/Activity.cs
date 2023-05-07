@@ -22,11 +22,14 @@ public class Activity{
     public virtual List<int> WelcomeMessage(){
         List<int> values = new List<int>();
         int duration = 0;
+
         Console.Clear();
         Console.WriteLine($"Welcome to the {_activityName}");
         Console.WriteLine($"\n{_description}");
+        
         Console.Write("\nHow long in seconds, would you like for your session?");
         duration = int.Parse(Console.ReadLine());
+        
         values.Add(duration);
         return values;
     }

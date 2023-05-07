@@ -9,13 +9,16 @@ public class BreathingActivity : Activity{
         List<int> values = new List<int>();
         int duration;
         int pollingFrequency;
+        
         Console.Clear();
         Console.WriteLine($"Welcome to the {_activityName}");
         Console.WriteLine($"\n{_description}");
+
         Console.Write("\nHow long in seconds, would you like for your session?");
         duration = int.Parse(Console.ReadLine());
         Console.Write("\nHow long should take in seconds each round?");
         pollingFrequency = int.Parse(Console.ReadLine());
+        
         values.Add(duration);
         values.Add(pollingFrequency);
         return values;
