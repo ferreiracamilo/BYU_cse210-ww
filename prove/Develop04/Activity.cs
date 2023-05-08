@@ -23,7 +23,6 @@ public class Activity{
         List<int> values = new List<int>();
         int duration = 0;
 
-        Console.Clear();
         Console.WriteLine($"Welcome to the {_activityName}");
         Console.WriteLine($"\n{_description}");
         

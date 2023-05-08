@@ -16,12 +16,16 @@ class Program
             if(option != 4){
                 switch(option){
                     case 1:
+                        Console.Clear();
                         parameters = breathingActivity.WelcomeMessage();
+                        Console.Clear();
                         breathingActivity.ExecuteActivity(parameters[0],parameters[1]);
                         break;
                     case 2:
+                        Console.Clear();
                         parameters = reflectionActivity.WelcomeMessage();
-                        //esto
+                        Console.Clear();
+                        reflectionActivity.ExecuteActivity(parameters[0]);
                         break;
                     case 3:
                         //

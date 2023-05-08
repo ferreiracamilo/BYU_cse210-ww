@@ -10,7 +10,6 @@ public class BreathingActivity : Activity{
         int duration;
         int pollingFrequency;
         
-        Console.Clear();
         Console.WriteLine($"Welcome to the {_activityName}");
         Console.WriteLine($"\n{_description}");
 
