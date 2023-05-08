@@ -14,9 +14,9 @@ public class BreathingActivity : Activity{
         Console.WriteLine($"Welcome to the {_activityName}");
         Console.WriteLine($"\n{_description}");
 
-        Console.Write("\nHow long in seconds, would you like for your session?");
+        Console.Write("\nHow long in seconds, would you like for your session? ");
         duration = int.Parse(Console.ReadLine());
-        Console.Write("\nHow long should take in seconds each round?");
+        Console.Write("\nHow long should take in seconds each round? ");
         pollingFrequency = int.Parse(Console.ReadLine());
         
         values.Add(duration);

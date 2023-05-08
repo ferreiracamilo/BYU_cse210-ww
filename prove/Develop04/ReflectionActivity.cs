@@ -6,6 +6,8 @@ public class ReflectionActivity : Activity{
     }
 
     public override void ExecuteActivity(int duration){
+        getReady();
+        
         DateTime startTime = DateTime.Now;
         DateTime endTime = startTime.AddSeconds(duration);
 
