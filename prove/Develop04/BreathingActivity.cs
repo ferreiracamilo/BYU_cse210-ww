@@ -24,22 +24,28 @@ public class BreathingActivity : Activity{
         return values;
     }
 
-    public override void ExecuteActivity(int duration){
+    public override void ExecuteActivity(int duration, int frequency){
+        getReady();
+
         DateTime startTime = DateTime.Now;
         DateTime endTime = startTime.AddSeconds(duration);
 
-        int i = 0;
-
         while(DateTime.Now < endTime){
-            string s = animationStrings[i];
-            Console.Write(s);
-            Thread.Sleep(1000);
-            Console.Write("\b \b");
+            //Breath in routine
+            Console.WriteLine("\n");
+            Console.Write($"Breath in...");
+            for(int j=frequency;j>0;j--){
+                Console.Write(j);
+                Thread.Sleep(1000);
+                Console.Write("\b \b");
+            }
 
-            i++;
-
-            if(i >= animationStrings.Count){
-                i = 0;
+            //Breath out routine
+            Console.Write("\nNow breath out...");
+            for(int k=frequency;k>0;k--){
+                Console.Write(k);
+                Thread.Sleep(1000);
+                Console.Write("\b \b");
             }
         }
     }

@@ -2,8 +2,8 @@ public class Activity{
     protected string _activityName;
     protected string _description;
 
-    protected List<string> animationStrings = new List<string> { "◐", "◓", "◑", "◒"};
-
+    protected List<string> animationStrings = new List<string> {"/","-","|","\\"};
+    
     public Activity (string activityName, string description){
         _activityName = activityName;
         _description = description;
@@ -32,5 +32,25 @@ public class Activity{
         
         values.Add(duration);
         return values;
+    }
+
+    public void getReady(){
+        Console.WriteLine("Get ready...");
+        DateTime startTime = DateTime.Now;
+        DateTime endTime = startTime.AddSeconds(5);
+
+        int i = 0;
+        while(DateTime.Now < endTime){
+            string s = animationStrings[i];
+            Console.Write(s);
+            Thread.Sleep(1000);
+            Console.Write("\b \b");            
+
+            i++;
+
+            if(i >= animationStrings.Count){
+                i = 0;
+            }
+        }
     }
 }

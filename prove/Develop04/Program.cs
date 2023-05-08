@@ -17,10 +17,10 @@ class Program
                 switch(option){
                     case 1:
                         parameters = breathingActivity.WelcomeMessage();
-                        Console.WriteLine("a"); 
+                        breathingActivity.ExecuteActivity(parameters[0],parameters[1]);
                         break;
                     case 2:
-                        // reflectionActivity.WelcomeMessage();
+                        parameters = reflectionActivity.WelcomeMessage();
                         //esto
                         break;
                     case 3:
