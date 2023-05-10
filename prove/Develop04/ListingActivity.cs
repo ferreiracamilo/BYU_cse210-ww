@@ -7,6 +7,10 @@ public class ListingActivity : Activity{
         _description = description;
     }
 
+    /// <summary>
+    /// Method will print in console a prompt expecting user to answer as many times possible within a given duration
+    /// </summary>
+    /// <param name="duration">Duration in seconds to perform this method</param>
     public override void ExecuteActivity(int duration){
         getReady();
 
@@ -23,6 +27,10 @@ public class ListingActivity : Activity{
         completeMessage(duration);
     }
 
+    /// <summary>
+    /// Get a random string value from class attribute 'prompts' list
+    /// </summary>
+    /// <returns>A string value from prompts list</returns>
     private string getRandomPrompt(){
         Random random = new Random();
         int promptIndex  = random.Next(0, prompts.Count-1);
@@ -30,6 +38,12 @@ public class ListingActivity : Activity{
         return prompts[promptIndex];
     }
 
+    /// <summary>
+    /// This method will print each line with a number and > along a read console. Each time user completes an input will be counted.
+    /// Method will executed the duration specified by argument
+    /// </summary>
+    /// <param name="duration">Duration in seconds to perform this method</param>
+    /// <returns>Total count of input lines completed by user</returns>
     private int WriteLinesForDuration(int duration){
         DateTime startTime = DateTime.Now;
         DateTime endTime = startTime.AddSeconds(duration);

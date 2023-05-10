@@ -7,6 +7,10 @@ public class ReflectionActivity : Activity{
         _description = description;
     }
 
+    /// <summary>
+    /// Method will print in console a prompt and wait for user response, after 2 questions are prompt giving half of given duration to reflect about them
+    /// </summary>
+    /// <param name="duration">Duration in seconds to perform this method</param>
     public override void ExecuteActivity(int duration){
         getReady();
 
@@ -33,6 +37,10 @@ public class ReflectionActivity : Activity{
         completeMessage(duration);
     }
 
+    /// <summary>
+    /// Get a random string value from class attribute 'prompts' list
+    /// </summary>
+    /// <returns>A string value from prompts list</returns>
     private string getRandomPrompt(){
         Random random = new Random();
         int promptIndex  = random.Next(0, prompts.Count-1);
@@ -40,6 +48,11 @@ public class ReflectionActivity : Activity{
         return prompts[promptIndex];
     }
 
+    /// <summary>
+    /// Method prepared to provide distinct("unique") values from class attribute 'questions' list
+    /// </summary>
+    /// <param name="distinctQty">Quantity of questions to return</param>
+    /// <returns>List of string containing different questions</returns>
     private List<string> getDistinctQuestions(int distinctQty){
         Random random = new Random();
         int[] questionDistinctIndexes = Enumerable.Range(0, questions.Count-1).OrderBy(x => random.Next()).Take(distinctQty).ToArray();
