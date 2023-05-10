@@ -37,11 +37,18 @@ public class Activity{
         return values;
     }
 
+    /// <summary>
+    /// Print generic get ready message
+    /// </summary>
     public void getReady(){
         Console.WriteLine("Get ready...");
         spinnerAnimation(5);
     }
 
+    /// <summary>
+    /// Display in console a spinner animation for 'n' seconds
+    /// </summary>
+    /// <param name="duration">int to indicate seconds</param>
     public void spinnerAnimation(int duration){
         DateTime startTime = DateTime.Now;
         DateTime endTime = startTime.AddSeconds(duration);
@@ -61,6 +68,10 @@ public class Activity{
         }
     }
 
+    /// <summary>
+    /// Display in console a counter animation for 'n' seconds
+    /// </summary>
+    /// <param name="duration">int to indicate seconds</param>
     public void counterAnimation(int duration){
         for(int i=duration;i>0;i--){
                 Console.Write(i);
@@ -69,6 +80,10 @@ public class Activity{
             }
     }
 
+    /// <summary>
+    /// Display in console a generic complete/success/confirmation message after an activity is completed along its duration
+    /// </summary>
+    /// <param name="duration">int to indicate seconds</param>
     public void completeMessage(int duration){
         Console.WriteLine("\n");
         Console.WriteLine("Well done!!");
