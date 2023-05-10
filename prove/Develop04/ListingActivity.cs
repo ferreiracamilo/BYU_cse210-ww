@@ -17,7 +17,7 @@ public class ListingActivity : Activity{
         Console.WriteLine("\nList as many responses you can to the following prompt");
         Console.WriteLine($"--- {getRandomPrompt()} ---");
         Console.Write("You may begin in: ");
-        counterAnimation(5);
+        CounterAnimation(5);
         Console.WriteLine();
 
         int inputLineQty = WriteLinesForDuration(duration);

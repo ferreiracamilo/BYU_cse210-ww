@@ -22,7 +22,7 @@ public class ReflectionActivity : Activity{
         if(c.Key == ConsoleKey.Enter){
             Console.WriteLine("\n\nNow ponder each of the following questions as they related to this experience.");
             Console.Write("You may begin in: ");
-            counterAnimation(5);
+            CounterAnimation(5);
         }else{
             throw new Exception("You pressed a different key, execute application again and do not forget to follow indications.");
         }
