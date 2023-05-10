@@ -39,6 +39,10 @@ class Program
         }while(option != 4);
     }
 
+    /// <summary>
+    /// Print menu method to reduce code lines within the case block and provide user possibility to indicate which option to be selected
+    /// </summary>
+    /// <returns>int number representing option selected</returns>
     public static int printMenu(){
         int option;
         Console.WriteLine("\nMenu Options:");
