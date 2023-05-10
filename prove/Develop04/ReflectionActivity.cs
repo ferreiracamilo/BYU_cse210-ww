@@ -15,7 +15,7 @@ public class ReflectionActivity : Activity{
         GetReady();
 
         Console.WriteLine("\nConsider the following prompt");
-        Console.WriteLine($"\n--- {getRandomPrompt()} ---");
+        Console.WriteLine($"\n--- {GetRandomPrompt()} ---");
 
         Console.Write("\nWhen you have something in mind, press enter to continue. ");
         ConsoleKeyInfo c = Console.ReadKey();
@@ -29,7 +29,7 @@ public class ReflectionActivity : Activity{
 
         Console.Clear();
 
-        foreach(string question in getDistinctQuestions(2)){
+        foreach(string question in GetDistinctQuestions(2)){
             Console.Write($"\n{question} ");
             SpinnerAnimation(duration/2);
         }
@@ -41,7 +41,7 @@ public class ReflectionActivity : Activity{
     /// Get a random string value from class attribute 'prompts' list
     /// </summary>
     /// <returns>A string value from prompts list</returns>
-    private string getRandomPrompt(){
+    private string GetRandomPrompt(){
         Random random = new Random();
         int promptIndex  = random.Next(0, prompts.Count-1);
 
@@ -53,7 +53,7 @@ public class ReflectionActivity : Activity{
     /// </summary>
     /// <param name="distinctQty">Quantity of questions to return</param>
     /// <returns>List of string containing different questions</returns>
-    private List<string> getDistinctQuestions(int distinctQty){
+    private List<string> GetDistinctQuestions(int distinctQty){
         Random random = new Random();
         int[] questionDistinctIndexes = Enumerable.Range(0, questions.Count-1).OrderBy(x => random.Next()).Take(distinctQty).ToArray();
         List<string> questionList = new List<string>();
