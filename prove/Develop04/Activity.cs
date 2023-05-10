@@ -42,14 +42,14 @@ public class Activity{
     /// </summary>
     public void getReady(){
         Console.WriteLine("Get ready...");
-        spinnerAnimation(5);
+        SpinnerAnimation(5);
     }
 
     /// <summary>
     /// Display in console a spinner animation for 'n' seconds
     /// </summary>
     /// <param name="duration">int to indicate seconds</param>
-    public void spinnerAnimation(int duration){
+    public void SpinnerAnimation(int duration){
         DateTime startTime = DateTime.Now;
         DateTime endTime = startTime.AddSeconds(duration);
 
@@ -87,10 +87,10 @@ public class Activity{
     public void CompleteMessage(int duration){
         Console.WriteLine("\n");
         Console.WriteLine("Well done!!");
-        spinnerAnimation(5);
+        SpinnerAnimation(5);
         
         Console.WriteLine($"You have completed another {duration} second/s of the {_activityName}");
-        spinnerAnimation(5);
+        SpinnerAnimation(5);
 
         Console.Clear();
     }

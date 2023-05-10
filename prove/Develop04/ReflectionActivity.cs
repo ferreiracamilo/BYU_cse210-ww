@@ -31,7 +31,7 @@ public class ReflectionActivity : Activity{
 
         foreach(string question in getDistinctQuestions(2)){
             Console.Write($"\n{question} ");
-            spinnerAnimation(duration/2);
+            SpinnerAnimation(duration/2);
         }
 
         CompleteMessage(duration);
