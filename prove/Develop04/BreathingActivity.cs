@@ -40,10 +40,10 @@ public class BreathingActivity : Activity{
 
         while(DateTime.Now < endTime){
             Console.WriteLine("\n");
-            breath(frequency, true);
+            Breath(frequency, true);
 
             Console.WriteLine("");
-            breath(frequency, false);
+            Breath(frequency, false);
         }
 
         CompleteMessage(duration);
@@ -54,7 +54,7 @@ public class BreathingActivity : Activity{
     /// </summary>
     /// <param name="frequency">Duration of counter animation in seconds</param>
     /// <param name="isBreathIn">Boolean indicating is intended to breath in or breath out</param>
-    private void breath(int frequency, Boolean isBreathIn){
+    private void Breath(int frequency, Boolean isBreathIn){
         string breathInWording = "Breath in...";
         string breathOutWording = "Now breath out...";
 
