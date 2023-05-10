@@ -30,23 +30,26 @@ public class BreathingActivity : Activity{
         DateTime endTime = startTime.AddSeconds(duration);
 
         while(DateTime.Now < endTime){
-            //Breath in routine
             Console.WriteLine("\n");
-            Console.Write($"Breath in...");
-            for(int j=frequency;j>0;j--){
-                Console.Write(j);
-                Thread.Sleep(1000);
-                Console.Write("\b \b");
-            }
+            breath(frequency, true);
 
-            //Breath out routine
-            Console.Write("\nNow breath out...");
-            for(int k=frequency;k>0;k--){
-                Console.Write(k);
-                Thread.Sleep(1000);
-                Console.Write("\b \b");
-            }
+            Console.WriteLine("");
+            breath(frequency, false);
         }
+
+        completeMessage(duration);
+    }
+
+    private void breath(int frequency, Boolean isBreathIn){
+        string breathInWording = "Breath in...";
+        string breathOutWording = "Now breath out...";
+
+        if(isBreathIn == true){
+            Console.Write(breathInWording);
+        }else{
+            Console.Write(breathOutWording);
+        }
+        counterAnimation(frequency);
     }
 
 }

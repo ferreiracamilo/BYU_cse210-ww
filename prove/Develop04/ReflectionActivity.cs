@@ -10,87 +10,45 @@ public class ReflectionActivity : Activity{
     public override void ExecuteActivity(int duration){
         getReady();
 
-        Random rnd1 = new Random();
-        int promptIndex  = rnd1.Next(0, 4);
-
         Console.WriteLine("\nConsider the following prompt");
-        Console.WriteLine($"\n--- {prompts[promptIndex]} ---");
+        Console.WriteLine($"\n--- {getRandomPrompt()} ---");
 
         Console.Write("\nWhen you have something in mind, press enter to continue. ");
         ConsoleKeyInfo c = Console.ReadKey();
         if(c.Key == ConsoleKey.Enter){
             Console.WriteLine("\n\nNow ponder each of the following questions as they related to this experience.");
             Console.Write("You may begin in: ");
-            for(int k=5;k>0;k--){
-                Console.Write(k);
-                Thread.Sleep(1000);
-                Console.Write("\b \b");
-            }
+            counterAnimation(5);
         }else{
             throw new Exception("You pressed a different key, execute application again and do not forget to follow indications.");
         }
 
-        // ## CONSIDER THE ACTUAL DURATION SELECTED BY USER ##
-        Random rnd2 = new Random();
-        int promptQuestion  = rnd1.Next(0, 4);
-
         Console.Clear();
-        Console.WriteLine(questions[promptQuestion]);
-        
-        int i = 0;
-        DateTime startTime1 = DateTime.Now;
-        while(startTime1 < startTime1.AddSeconds(duration/2)){
-            string s = animationStrings[i];
-            Console.Write(s);
-            Thread.Sleep(1000);
-            Console.Write("\b \b");            
 
-            i++;
-
-            if(i >= animationStrings.Count){
-                i = 0;
-            }
-        }
-        promptQuestion  = rnd1.Next(0, 4);
-        Console.WriteLine(questions[promptQuestion]);
-        i = 0;
-
-        DateTime startTime2 = DateTime.Now;
-        while(startTime2 < startTime2.AddSeconds(duration/2)){
-            string s = animationStrings[i];
-            Console.Write(s);
-            Thread.Sleep(1000);
-            Console.Write("\b \b");            
-
-            i++;
-
-            if(i >= animationStrings.Count){
-                i = 0;
-            }
+        foreach(string question in getDistinctQuestions(2)){
+            Console.Write($"\n{question} ");
+            spinnerAnimation(duration/2);
         }
 
-        Console.WriteLine("\nWell done!!");
-        
-        Console.WriteLine($"You have completed another {duration} second/s of the Reflecting Activity");
+        completeMessage(duration);
+    }
 
-        /*
-        DateTime startTime = DateTime.Now;
-        DateTime endTime = startTime.AddSeconds(duration);
+    private string getRandomPrompt(){
+        Random random = new Random();
+        int promptIndex  = random.Next(0, prompts.Count-1);
 
-        int i = 0;
+        return prompts[promptIndex];
+    }
 
-        while(DateTime.Now < endTime){
-            string s = animationStrings[i];
-            Console.Write(s);
-            Thread.Sleep(1000);
-            Console.Write("\b \b");
+    private List<string> getDistinctQuestions(int distinctQty){
+        Random random = new Random();
+        int[] questionDistinctIndexes = Enumerable.Range(0, questions.Count-1).OrderBy(x => random.Next()).Take(distinctQty).ToArray();
+        List<string> questionList = new List<string>();
 
-            i++;
-
-            if(i >= animationStrings.Count){
-                i = 0;
-            }
+        foreach(int questionIndex in questionDistinctIndexes){
+            questionList.Add(questions[questionIndex]);
         }
-        */
+
+        return questionList;
     }
 }

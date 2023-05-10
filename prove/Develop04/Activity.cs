@@ -35,10 +35,10 @@ public class Activity{
 
     public void getReady(){
         Console.WriteLine("Get ready...");
-        loadAnimation(5);
+        spinnerAnimation(5);
     }
 
-    public void loadAnimation(int duration){
+    public void spinnerAnimation(int duration){
         DateTime startTime = DateTime.Now;
         DateTime endTime = startTime.AddSeconds(duration);
 
@@ -55,5 +55,24 @@ public class Activity{
                 i = 0;
             }
         }
+    }
+
+    public void counterAnimation(int duration){
+        for(int i=duration;i>0;i--){
+                Console.Write(i);
+                Thread.Sleep(1000);
+                Console.Write("\b \b");
+            }
+    }
+
+    public void completeMessage(int duration){
+        Console.WriteLine("\n");
+        Console.WriteLine("Well done!!");
+        spinnerAnimation(5);
+        
+        Console.WriteLine($"You have completed another {duration} second/s of the {_activityName}");
+        spinnerAnimation(5);
+
+        Console.Clear();
     }
 }
