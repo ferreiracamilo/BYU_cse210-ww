@@ -5,6 +5,10 @@ public class BreathingActivity : Activity{
         _description = description;
     }
 
+    /// <summary>
+    /// Print welcome message and collect values needed to be provided as arguments for executing activities
+    /// </summary>
+    /// <returns>List of int values(duration and/or frequency)</returns>
     public override List<int> WelcomeMessage(){
         List<int> values = new List<int>();
         int duration;
@@ -23,6 +27,12 @@ public class BreathingActivity : Activity{
         return values;
     }
 
+
+    /// <summary>
+    /// Method will print in console indications to user to breath in and breath out during certain time and frequency rounds
+    /// </summary>
+    /// <param name="duration">Duration in seconds to perform this method</param>
+    /// <param name="frequency">Duration of each breath round</param>
     public override void ExecuteActivity(int duration, int frequency){
         getReady();
 
@@ -40,6 +50,11 @@ public class BreathingActivity : Activity{
         completeMessage(duration);
     }
 
+    /// <summary>
+    /// Print either breath in or breath out along a counter animation
+    /// </summary>
+    /// <param name="frequency">Duration of counter animation in seconds</param>
+    /// <param name="isBreathIn">Boolean indicating is intended to breath in or breath out</param>
     private void breath(int frequency, Boolean isBreathIn){
         string breathInWording = "Breath in...";
         string breathOutWording = "Now breath out...";

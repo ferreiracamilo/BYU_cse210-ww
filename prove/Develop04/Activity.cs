@@ -19,6 +19,10 @@ public class Activity{
         //placeholder method to be overrided into child classes
     }
 
+    /// <summary>
+    /// Print welcome message and collect values needed to be provided as arguments for executing activities
+    /// </summary>
+    /// <returns>List of int values(duration and/or frequency)</returns>
     public virtual List<int> WelcomeMessage(){
         List<int> values = new List<int>();
         int duration = 0;
