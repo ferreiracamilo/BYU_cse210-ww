@@ -33,7 +33,7 @@ public class BreathingActivity : Activity{
     /// <param name="duration">Duration in seconds to perform this method</param>
     /// <param name="frequency">Duration of each breath round</param>
     public override void ExecuteActivity(int duration, int frequency){
-        getReady();
+        GetReady();
 
         DateTime startTime = DateTime.Now;
         DateTime endTime = startTime.AddSeconds(duration);
