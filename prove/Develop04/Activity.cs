@@ -84,7 +84,7 @@ public class Activity{
     /// Display in console a generic complete/success/confirmation message after an activity is completed along its duration
     /// </summary>
     /// <param name="duration">int to indicate seconds</param>
-    public void completeMessage(int duration){
+    public void CompleteMessage(int duration){
         Console.WriteLine("\n");
         Console.WriteLine("Well done!!");
         spinnerAnimation(5);

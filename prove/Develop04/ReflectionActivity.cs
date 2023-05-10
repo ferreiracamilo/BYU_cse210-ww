@@ -34,7 +34,7 @@ public class ReflectionActivity : Activity{
             spinnerAnimation(duration/2);
         }
 
-        completeMessage(duration);
+        CompleteMessage(duration);
     }
 
     /// <summary>

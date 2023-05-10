@@ -46,7 +46,7 @@ public class BreathingActivity : Activity{
             breath(frequency, false);
         }
 
-        completeMessage(duration);
+        CompleteMessage(duration);
     }
 
     /// <summary>

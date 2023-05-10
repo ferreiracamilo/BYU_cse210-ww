@@ -24,7 +24,7 @@ public class ListingActivity : Activity{
 
         Console.WriteLine($"You listed {inputLineQty} items");
 
-        completeMessage(duration);
+        CompleteMessage(duration);
     }
 
     /// <summary>
