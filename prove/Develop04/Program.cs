@@ -12,7 +12,7 @@ class Program
         ListingActivity listingActivity = new ListingActivity("Listing Activity", "This activity will help you reflect on the good things in your life by having you list as many things as you can in a certain area.");
 
         do{
-            option = printMenu();
+            option = PrintMenu();
             if(option != 4){
                 switch(option){
                     case 1:
@@ -43,7 +43,7 @@ class Program
     /// Print menu method to reduce code lines within the case block and provide user possibility to indicate which option to be selected
     /// </summary>
     /// <returns>int number representing option selected</returns>
-    public static int printMenu(){
+    public static int PrintMenu(){
         int option;
         Console.WriteLine("\nMenu Options:");
         Console.WriteLine("    1. Start breathing activity");
