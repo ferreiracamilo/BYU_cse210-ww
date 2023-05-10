@@ -63,7 +63,7 @@ public class BreathingActivity : Activity{
         }else{
             Console.Write(breathOutWording);
         }
-        counterAnimation(frequency);
+        CounterAnimation(frequency);
     }
 
 }

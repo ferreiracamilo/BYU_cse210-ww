@@ -72,7 +72,7 @@ public class Activity{
     /// Display in console a counter animation for 'n' seconds
     /// </summary>
     /// <param name="duration">int to indicate seconds</param>
-    public void counterAnimation(int duration){
+    public void CounterAnimation(int duration){
         for(int i=duration;i>0;i--){
                 Console.Write(i);
                 Thread.Sleep(1000);
