@@ -12,7 +12,7 @@ public class ListingActivity : Activity{
     /// </summary>
     /// <param name="duration">Duration in seconds to perform this method</param>
     public override void ExecuteActivity(int duration){
-        getReady();
+        GetReady();
 
         Console.WriteLine("\nList as many responses you can to the following prompt");
         Console.WriteLine($"--- {getRandomPrompt()} ---");

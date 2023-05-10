@@ -12,7 +12,7 @@ public class ReflectionActivity : Activity{
     /// </summary>
     /// <param name="duration">Duration in seconds to perform this method</param>
     public override void ExecuteActivity(int duration){
-        getReady();
+        GetReady();
 
         Console.WriteLine("\nConsider the following prompt");
         Console.WriteLine($"\n--- {getRandomPrompt()} ---");

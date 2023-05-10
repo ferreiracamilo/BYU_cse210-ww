@@ -40,7 +40,7 @@ public class Activity{
     /// <summary>
     /// Print generic get ready message
     /// </summary>
-    public void getReady(){
+    public void GetReady(){
         Console.WriteLine("Get ready...");
         SpinnerAnimation(5);
     }
