@@ -35,8 +35,12 @@ public class Activity{
 
     public void getReady(){
         Console.WriteLine("Get ready...");
+        loadAnimation(5);
+    }
+
+    public void loadAnimation(int duration){
         DateTime startTime = DateTime.Now;
-        DateTime endTime = startTime.AddSeconds(5);
+        DateTime endTime = startTime.AddSeconds(duration);
 
         int i = 0;
         while(DateTime.Now < endTime){
