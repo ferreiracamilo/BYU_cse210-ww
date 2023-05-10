@@ -27,7 +27,6 @@ public class BreathingActivity : Activity{
         return values;
     }
 
-
     /// <summary>
     /// Method will print in console indications to user to breath in and breath out during certain time and frequency rounds
     /// </summary>
