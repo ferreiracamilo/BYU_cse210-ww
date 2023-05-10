@@ -28,8 +28,10 @@ class Program
                         reflectionActivity.ExecuteActivity(parameters[0]);
                         break;
                     case 3:
-                        //
-                        //esto
+                        Console.Clear();
+                        parameters = listingActivity.WelcomeMessage();
+                        Console.Clear();
+                        listingActivity.ExecuteActivity(parameters[0]);
                         break;
                 }
             }
