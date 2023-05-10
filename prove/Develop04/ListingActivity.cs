@@ -15,7 +15,7 @@ public class ListingActivity : Activity{
         GetReady();
 
         Console.WriteLine("\nList as many responses you can to the following prompt");
-        Console.WriteLine($"--- {getRandomPrompt()} ---");
+        Console.WriteLine($"--- {GetRandomPrompt()} ---");
         Console.Write("You may begin in: ");
         CounterAnimation(5);
         Console.WriteLine();
@@ -31,7 +31,7 @@ public class ListingActivity : Activity{
     /// Get a random string value from class attribute 'prompts' list
     /// </summary>
     /// <returns>A string value from prompts list</returns>
-    private string getRandomPrompt(){
+    private string GetRandomPrompt(){
         Random random = new Random();
         int promptIndex  = random.Next(0, prompts.Count-1);
 
