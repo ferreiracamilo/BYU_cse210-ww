@@ -2,7 +2,7 @@ public class Activity{
     protected string _activityName;
     protected string _description;
 
-    protected List<string> animationStrings = new List<string> {"/","-","|","\\"};
+    protected List<string> _animationStrings = new List<string> {"/","-","|","\\"};
     
     public Activity (string activityName, string description){
         _activityName = activityName;
@@ -55,14 +55,14 @@ public class Activity{
 
         int i = 0;
         while(DateTime.Now < endTime){
-            string s = animationStrings[i];
+            string s = _animationStrings[i];
             Console.Write(s);
             Thread.Sleep(1000);
             Console.Write("\b \b");            
 
             i++;
 
-            if(i >= animationStrings.Count){
+            if(i >= _animationStrings.Count){
                 i = 0;
             }
         }
