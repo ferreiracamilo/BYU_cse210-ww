@@ -1,6 +1,6 @@
 public class ListingActivity : Activity{
 
-    private List<string> prompts = new List<string> {"Who are people that you appreciate?","What are personal strengths of yours?","Who are people that you have helped this week?","When have you felt the Holy Ghost this month?","Who are some of your personal heroes?"};
+    private List<string> _prompts = new List<string> {"Who are people that you appreciate?","What are personal strengths of yours?","Who are people that you have helped this week?","When have you felt the Holy Ghost this month?","Who are some of your personal heroes?"};
 
     public ListingActivity(string activityName, string description) : base (activityName, description){
         _activityName = activityName;
@@ -33,9 +33,9 @@ public class ListingActivity : Activity{
     /// <returns>A string value from prompts list</returns>
     private string GetRandomPrompt(){
         Random random = new Random();
-        int promptIndex  = random.Next(0, prompts.Count-1);
+        int promptIndex  = random.Next(0, _prompts.Count-1);
 
-        return prompts[promptIndex];
+        return _prompts[promptIndex];
     }
 
     /// <summary>
