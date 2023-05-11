@@ -1,7 +1,7 @@
 public class ReflectionActivity : Activity{
 
     private List<string> _prompts = new List<string> {"Think of a time when you did something really difficult","Think of a time when you treat badly a relative","Think if you could've done any better during your day","Think of a time when you feel sad and how could you faced this in the present"};
-    private List<string> questions = new List<string> {"What is your favorite thing about this experience?","How did you feel when it was completed?","Would you like to be asked about something else?","Did you reflect and learn with this experience?"};
+    private List<string> _questions = new List<string> {"What is your favorite thing about this experience?","How did you feel when it was completed?","Would you like to be asked about something else?","Did you reflect and learn with this experience?"};
     public ReflectionActivity(string activityName, string description) : base (activityName, description){
         _activityName = activityName;
         _description = description;
@@ -55,11 +55,11 @@ public class ReflectionActivity : Activity{
     /// <returns>List of string containing different questions</returns>
     private List<string> GetDistinctQuestions(int distinctQty){
         Random random = new Random();
-        int[] questionDistinctIndexes = Enumerable.Range(0, questions.Count-1).OrderBy(x => random.Next()).Take(distinctQty).ToArray();
+        int[] questionDistinctIndexes = Enumerable.Range(0, _questions.Count-1).OrderBy(x => random.Next()).Take(distinctQty).ToArray();
         List<string> questionList = new List<string>();
 
         foreach(int questionIndex in questionDistinctIndexes){
-            questionList.Add(questions[questionIndex]);
+            questionList.Add(_questions[questionIndex]);
         }
 
         return questionList;
