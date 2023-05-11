@@ -1,6 +1,6 @@
 public class ReflectionActivity : Activity{
 
-    private List<string> prompts = new List<string> {"Think of a time when you did something really difficult","Think of a time when you treat badly a relative","Think if you could've done any better during your day","Think of a time when you feel sad and how could you faced this in the present"};
+    private List<string> _prompts = new List<string> {"Think of a time when you did something really difficult","Think of a time when you treat badly a relative","Think if you could've done any better during your day","Think of a time when you feel sad and how could you faced this in the present"};
     private List<string> questions = new List<string> {"What is your favorite thing about this experience?","How did you feel when it was completed?","Would you like to be asked about something else?","Did you reflect and learn with this experience?"};
     public ReflectionActivity(string activityName, string description) : base (activityName, description){
         _activityName = activityName;
@@ -43,9 +43,9 @@ public class ReflectionActivity : Activity{
     /// <returns>A string value from prompts list</returns>
     private string GetRandomPrompt(){
         Random random = new Random();
-        int promptIndex  = random.Next(0, prompts.Count-1);
+        int promptIndex  = random.Next(0, _prompts.Count-1);
 
-        return prompts[promptIndex];
+        return _prompts[promptIndex];
     }
 
     /// <summary>
