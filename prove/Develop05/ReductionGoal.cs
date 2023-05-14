@@ -38,7 +38,7 @@ public class ReductionGoal : Goal{
         Console.Write($"\n{questionGoalDescription} ");
         _description = Console.ReadLine();
         
-        Console.Write($"\n{questionGoalPoitns} ");
+        Console.Write($"\n{questionGoalPoints} ");
         _rewardPoints = int.Parse(Console.ReadLine());
     }
 }

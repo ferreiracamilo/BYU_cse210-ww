@@ -1,7 +1,8 @@
 public class ChecklistGoal : Goal{
 
-    private readonly string algo = "How many times does this goal need to be accomplished for a bonus?";
-    private readonly string algo1 = "What is the bonus for accomplising it that many times?";
+    // questionGoalName
+    private readonly string _questionBonusQualificationGoalCount = "How many times does this goal need to be accomplished for a bonus?";
+    private readonly string _questionBonusQualificationGoalRewardPoints = "What is the bonus for accomplising it that many times?";
     private int _bonusQualificationGoalCount;
     private int _bonusQualificationGoalRewardPoints;
 
@@ -68,7 +69,13 @@ public class ChecklistGoal : Goal{
         Console.Write($"\n{questionGoalDescription} ");
         _description = Console.ReadLine();
         
-        Console.Write($"\n{questionGoalPoitns} ");
+        Console.Write($"\n{questionGoalPoints} ");
         _rewardPoints = int.Parse(Console.ReadLine());
+
+        Console.Write($"\n{_questionBonusQualificationGoalCount} ");
+        _description = Console.ReadLine();
+
+        Console.Write($"\n{_questionBonusQualificationGoalRewardPoints} ");
+        _description = Console.ReadLine();
     }
 }
