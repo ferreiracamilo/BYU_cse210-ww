@@ -7,11 +7,11 @@ public class SimpleGoal : Goal{
     /// <param name="description">Short description to assign to new Simple Goal object</param>
     /// <param name="rewardPoints">Quantity of reward points to provide if Simple Goal object is accomplished</param>
     /// <returns>SimpleGoal object</returns>
-    public SimpleGoal(string name, string description, int rewardPoints){
+    public SimpleGoal(string name, string description, int rewardPoints, int completionCount){
         _name = name;
         _description = description;
         _rewardPoints = rewardPoints;
-        _completionCount = 0;
+        _completionCount = completionCount;
     }
 
     public SimpleGoal(){
@@ -48,7 +48,7 @@ public class SimpleGoal : Goal{
         Console.Write($"\n{questionGoalDescription} ");
         _description = Console.ReadLine();
         
-        Console.Write($"\n{questionGoalPoitns} ");
+        Console.Write($"\n{questionGoalPoints} ");
         _rewardPoints = int.Parse(Console.ReadLine());
     }
 }

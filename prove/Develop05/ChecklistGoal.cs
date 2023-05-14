@@ -13,13 +13,13 @@ public class ChecklistGoal : Goal{
     /// <param name="description">Short description to assign to new Simple Goal object</param>
     /// <param name="rewardPoints">Quantity of reward points to provide if Simple Goal object is accomplished</param>
     /// <returns>ChecklistGoal object</returns>
-    public ChecklistGoal(string name, string description, int rewardPoints, int bonusQualificationGoalCount, int bonusQualificationGoalRewardPoints){
+    public ChecklistGoal(string name, string description, int rewardPoints, int bonusQualificationGoalCount, int bonusQualificationGoalRewardPoints, int completionCount){
         _name = name;
         _description = description;
         _rewardPoints = rewardPoints;
         _bonusQualificationGoalCount = bonusQualificationGoalCount;
         _bonusQualificationGoalRewardPoints = bonusQualificationGoalRewardPoints;
-        _completionCount = 0;
+        _completionCount = completionCount;
     }
 
     public ChecklistGoal(){

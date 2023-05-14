@@ -7,11 +7,11 @@ public class ReductionGoal : Goal{
     /// <param name="description">Short description to assign to new Simple Goal object</param>
     /// <param name="rewardPoints">Quantity of reward points to provide if Simple Goal object is accomplished</param>
     /// <returns>ReductionGoal object</returns>
-    public ReductionGoal(string name, string description, int rewardPoints){
+    public ReductionGoal(string name, string description, int rewardPoints, int completionCount){
         _name = name;
         _description = description;
         _rewardPoints = rewardPoints;
-        _completionCount = 0;
+        _completionCount = completionCount;
     }
 
     public ReductionGoal(){
