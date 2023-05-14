@@ -1,11 +1,11 @@
 public abstract class Shape{
     protected string _color;
 
-    protected string GetColor(){
+    public string GetColor(){
         return _color;
     }
 
-    protected void SetColor(string color){
+    public void SetColor(string color){
         _color = color;
     }
 
