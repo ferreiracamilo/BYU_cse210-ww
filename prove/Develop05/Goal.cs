@@ -22,7 +22,9 @@ public abstract class Goal{
     /// CalculatePoints: It will calculate points obtained either based on completion count and/or bonus obtained if applies
     /// </summary>
     /// <returns>An int representing points obtained from goal</returns>
-    public abstract int CalculatePoints();
+    public virtual int CalculatePoints(){
+        return _completionCount * _rewardPoints;
+    }
 
     public abstract Goal AskInformation();
 

@@ -1,12 +1,9 @@
 public class ChecklistGoal : Goal{
 
-    // bonusQualificationGoalCount
-    // bonusQualificationGoalRewardPoints
-    private int _bonusQualificationGoalCount;
-    private int _bonusQualificationGoalRewardPoints;
-
     private readonly string algo = "How many times does this goal need to be accomplished for a bonus?";
     private readonly string algo1 = "What is the bonus for accomplising it that many times?";
+    private int _bonusQualificationGoalCount;
+    private int _bonusQualificationGoalRewardPoints;
 
     /// <summary>
     /// ChecklistGoal constructor that will require 3 arguments and completion count will be set as zero by default
@@ -28,6 +25,8 @@ public class ChecklistGoal : Goal{
         _name = "";
         _description = "";
         _rewardPoints = 0;
+        _bonusQualificationGoalCount = 0;
+        _bonusQualificationGoalRewardPoints = 0;
         _completionCount = 0;
     }
 
@@ -50,10 +49,17 @@ public class ChecklistGoal : Goal{
     }
 
     public override int CalculatePoints(){
-        return 1;
+        int countPoints = 0;
+        countPoints = _completionCount * _rewardPoints;
+        
+        if(_bonusQualificationGoalCount == _completionCount){
+            countPoints += _bonusQualificationGoalRewardPoints;
+        }
+
+        return countPoints;
     }
 
-    public override Goal askInformation(){
+    public override Goal AskInformation(){
         return new SimpleGoal();
     }
 }

@@ -26,10 +26,10 @@ public class ReductionGoal : Goal{
     }
 
     public override int CalculatePoints(){
-        return 1;
+        return (_completionCount * _rewardPoints) * -1;
     }
 
-    public override Goal askInformation(){
+    public override Goal AskInformation(){
         return new SimpleGoal();
     }
 }

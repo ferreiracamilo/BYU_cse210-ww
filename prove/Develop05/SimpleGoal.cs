@@ -39,11 +39,7 @@ public class SimpleGoal : Goal{
         }
     }
 
-    public override int CalculatePoints(){
-        return 1;
-    }
-
-    public override Goal askInformation(){
+    public override Goal AskInformation(){
         return new SimpleGoal();
     }
 }
