@@ -10,7 +10,7 @@ public class Rectangle : Shape{
     }
 
     public override double GetArea(){
-        return 2;
+        return _length*_width;
     }
 
 }
