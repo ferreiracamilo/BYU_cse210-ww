@@ -18,6 +18,10 @@ public abstract class Goal{
         _completionCount++;
     }
 
+    /// <summary>
+    /// CalculatePoints: It will calculate points obtained either based on completion count and/or bonus obtained if applies
+    /// </summary>
+    /// <returns>An int representing points obtained from goal</returns>
     public abstract int CalculatePoints();
 
 }
