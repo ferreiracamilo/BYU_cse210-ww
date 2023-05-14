@@ -1,6 +1,5 @@
 public abstract class Goal{
     
-    protected readonly string _classDescription;
     protected string _name;
     protected string _description;
     protected int _rewardPoints;
