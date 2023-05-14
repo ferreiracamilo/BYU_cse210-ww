@@ -1,6 +1,25 @@
 public class SimpleGoal : Goal{
 
-    // private readonly string _classDescription = "These goals are meant to have a clear start and finish and will be accomplished in just one iteration.";
+    /// <summary>
+    /// SimpleGoal constructor that will require 3 arguments and completion count will be set as zero by default
+    /// </summary>
+    /// <param name="name">Name to assign to new Simple Goal object</param>
+    /// <param name="description">Short description to assign to new Simple Goal object</param>
+    /// <param name="rewardPoints">Quantity of reward points to provide if Simple Goal object is accomplished</param>
+    /// <returns>SimpleGoal object</returns>
+    public SimpleGoal(string name, string description, int rewardPoints){
+        _name = name;
+        _description = description;
+        _rewardPoints = rewardPoints;
+        _completionCount = 0;
+    }
+
+    public SimpleGoal(){
+        _name = "";
+        _description = "";
+        _rewardPoints = 0;
+        _completionCount = 0;
+    }
 
     public override void SaveGoal(){
         //asda
@@ -13,7 +32,7 @@ public class SimpleGoal : Goal{
         return 1;
     }
 
-    public SimpleGoal askInformation(){
+    public static SimpleGoal askInformation(){
         return new SimpleGoal();
     }
 }
