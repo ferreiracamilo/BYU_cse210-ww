@@ -54,7 +54,7 @@ public class ReductionGoal : Goal{
         if(isShort){
             objectFormatted=$"[{statusBox}] {_name} ({_description}) -if there's no 'X' you succeeded-";
         }else{
-            objectFormatted=$"SimpleGoal,{_name},{_description},{_rewardPoints},{_completionCount}";
+            objectFormatted=$"ReductionGoal,{_name},{_description},{_rewardPoints},{_completionCount}";
         }
 
         return objectFormatted;

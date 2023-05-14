@@ -19,9 +19,9 @@ public class ChecklistGoal : Goal{
         _name = name;
         _description = description;
         _rewardPoints = rewardPoints;
+        _completionCount = completionCount;
         _bonusQualificationGoalCount = bonusQualificationGoalCount;
         _bonusQualificationGoalRewardPoints = bonusQualificationGoalRewardPoints;
-        _completionCount = completionCount;
     }
 
     public ChecklistGoal(){
@@ -92,7 +92,7 @@ public class ChecklistGoal : Goal{
         if(isShort){
             objectFormatted=$"[{statusBox}] {_name} ({_description})";
         }else{
-            objectFormatted=$"SimpleGoal,{_name},{_description},{_rewardPoints},{_completionCount}";
+            objectFormatted=$"ChecklistGoal,{_name},{_description},{_rewardPoints},{_completionCount},{_bonusQualificationGoalCount},{_bonusQualificationGoalRewardPoints}";
         }
 
         return objectFormatted;
