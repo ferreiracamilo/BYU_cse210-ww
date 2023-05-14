@@ -80,4 +80,21 @@ public class ChecklistGoal : Goal{
         Console.Write($"\n{_questionBonusQualificationGoalRewardPoints} ");
         _bonusQualificationGoalRewardPoints = int.Parse(Console.ReadLine());
     }
+
+    public override string ToText(Boolean isShort){
+        string objectFormatted = "";
+        string statusBox = " ";
+
+        if(_completionCount == 1){
+            statusBox = "X";
+        }
+
+        if(isShort){
+            objectFormatted=$"[{statusBox}] {_name} ({_description})";
+        }else{
+            objectFormatted=$"SimpleGoal,{_name},{_description},{_rewardPoints},{_completionCount}";
+        }
+
+        return objectFormatted;
+    }
 }

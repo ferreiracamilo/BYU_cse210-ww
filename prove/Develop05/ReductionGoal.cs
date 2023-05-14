@@ -42,4 +42,21 @@ public class ReductionGoal : Goal{
         Console.Write($"\n{questionGoalPoints} ");
         _rewardPoints = int.Parse(Console.ReadLine());
     }
+
+    public override string ToText(Boolean isShort){
+        string objectFormatted = "";
+        string statusBox = "X";
+
+        if(_completionCount == 0){
+            statusBox = " ";
+        }
+
+        if(isShort){
+            objectFormatted=$"[{statusBox}] {_name} ({_description}) -if there's no 'X' you succeeded-";
+        }else{
+            objectFormatted=$"SimpleGoal,{_name},{_description},{_rewardPoints},{_completionCount}";
+        }
+
+        return objectFormatted;
+    }
 }

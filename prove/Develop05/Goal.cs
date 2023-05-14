@@ -31,4 +31,12 @@ public abstract class Goal{
     /// </summary>
     public abstract void AskInformation();
 
+    /// <summary>
+    /// ToText: Return the object formatted on short or long "description".
+    /// For 'List Goals' argument expected True and for save is False
+    /// </summary>
+    /// <param name="isShort">Boolean true for short and false for long</param>
+    /// <returns>A string representing in natural language the information of the object</returns>
+    public abstract string ToText(Boolean isShort);
+
 }

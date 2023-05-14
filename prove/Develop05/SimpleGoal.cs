@@ -52,4 +52,21 @@ public class SimpleGoal : Goal{
         Console.Write($"\n{questionGoalPoints} ");
         _rewardPoints = int.Parse(Console.ReadLine());
     }
+
+    public override string ToText(Boolean isShort){
+        string objectFormatted = "";
+        string statusBox = " ";
+
+        if(_completionCount == 1){
+            statusBox = "X";
+        }
+
+        if(isShort){
+            objectFormatted=$"[{statusBox}] {_name} ({_description})";
+        }else{
+            objectFormatted=$"SimpleGoal,{_name},{_description},{_rewardPoints},{_completionCount}";
+        }
+
+        return objectFormatted;
+    }
 }
