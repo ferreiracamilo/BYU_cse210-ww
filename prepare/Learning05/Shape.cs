@@ -1,9 +1,13 @@
 public abstract class Shape{
     protected string _color;
 
-    protected abstract string GetColor();
+    protected string GetColor(){
+        return _color;
+    }
 
-    protected abstract void SetColor(string color);
+    protected void SetColor(string color){
+        _color = color;
+    }
 
-    protected abstract double GetArea();
+    public abstract double GetArea();
 }
