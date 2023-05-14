@@ -4,8 +4,7 @@ class Program
 {
     static void Main(string[] args){
         int option = 0;
-        List<int> parameters = new List<int>();
-
+        List<Goal> goalList = new List<Goal>();
 
         do{
             option = PrintMenu();
@@ -20,18 +19,22 @@ class Program
                             case 1:
                                 SimpleGoal simpleGoal = new SimpleGoal();
                                 simpleGoal.AskInformation();
+                                goalList.Add(simpleGoal);
                                 break;
                             case 2:
                                 EternalGoal eternalGoal = new EternalGoal();
                                 eternalGoal.AskInformation();
+                                goalList.Add(eternalGoal);
                                 break;
                             case 3:
                                 ChecklistGoal checklistGoal = new ChecklistGoal();
                                 checklistGoal.AskInformation();
+                                goalList.Add(checklistGoal);
                                 break;
                             case 4:
                                 ReductionGoal reductionGoal = new ReductionGoal();
                                 reductionGoal.AskInformation();
+                                goalList.Add(reductionGoal);
                                 break;
                         }
 
