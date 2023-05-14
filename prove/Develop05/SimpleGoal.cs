@@ -35,7 +35,7 @@ public class SimpleGoal : Goal{
         if(_completionCount == 0){
             _completionCount++;
         }else{
-            throw new CompletionCountException("Completion count must be equal to zero.");
+            throw new CompletionCountException("Completion count must be equal to zero, goal was achieved already.");
         }
     }
 
@@ -43,7 +43,7 @@ public class SimpleGoal : Goal{
         return 1;
     }
 
-    public static SimpleGoal askInformation(){
+    public override Goal askInformation(){
         return new SimpleGoal();
     }
 }

@@ -24,4 +24,6 @@ public abstract class Goal{
     /// <returns>An int representing points obtained from goal</returns>
     public abstract int CalculatePoints();
 
+    public abstract Goal askInformation();
+
 }

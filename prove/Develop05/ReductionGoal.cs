@@ -29,7 +29,7 @@ public class ReductionGoal : Goal{
         return 1;
     }
 
-    public ReductionGoal askInformation(){
-        return new ReductionGoal();
+    public override Goal askInformation(){
+        return new SimpleGoal();
     }
 }

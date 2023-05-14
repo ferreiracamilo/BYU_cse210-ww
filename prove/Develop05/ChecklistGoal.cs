@@ -1,5 +1,12 @@
 public class ChecklistGoal : Goal{
-    private int _bonusTreshold;
+
+    // bonusQualificationGoalCount
+    // bonusQualificationGoalRewardPoints
+    private int _bonusQualificationGoalCount;
+    private int _bonusQualificationGoalRewardPoints;
+
+    private readonly string algo = "How many times does this goal need to be accomplished for a bonus?";
+    private readonly string algo1 = "What is the bonus for accomplising it that many times?";
 
     /// <summary>
     /// ChecklistGoal constructor that will require 3 arguments and completion count will be set as zero by default
@@ -8,11 +15,12 @@ public class ChecklistGoal : Goal{
     /// <param name="description">Short description to assign to new Simple Goal object</param>
     /// <param name="rewardPoints">Quantity of reward points to provide if Simple Goal object is accomplished</param>
     /// <returns>ChecklistGoal object</returns>
-    public ChecklistGoal(string name, string description, int rewardPoints, int bonusTreshold){
+    public ChecklistGoal(string name, string description, int rewardPoints, int bonusQualificationGoalCount, int bonusQualificationGoalRewardPoints){
         _name = name;
         _description = description;
         _rewardPoints = rewardPoints;
-        _bonusTreshold = bonusTreshold;
+        _bonusQualificationGoalCount = bonusQualificationGoalCount;
+        _bonusQualificationGoalRewardPoints = bonusQualificationGoalRewardPoints;
         _completionCount = 0;
     }
 
@@ -34,10 +42,10 @@ public class ChecklistGoal : Goal{
     /// Thow generic exception when completionCount is not lower than _bonusTreshold
     /// </exception>
     public override void RecordEvent(){
-        if(_completionCount < _bonusTreshold){
+        if(_completionCount < _bonusQualificationGoalCount){
             _completionCount++;
         }else{
-            throw new CompletionCountException("Completion count must be lower or equal to bonus threshold");
+            throw new CompletionCountException("Completion count must be lower or equal to bonus threshold, goal was achieved already.");
         }
     }
 
@@ -45,7 +53,7 @@ public class ChecklistGoal : Goal{
         return 1;
     }
 
-    public ChecklistGoal askInformation(){
-        return new ChecklistGoal();
+    public override Goal askInformation(){
+        return new SimpleGoal();
     }
 }
