@@ -12,4 +12,8 @@ public class SimpleGoal : Goal{
     public override int CalculatePoints(){
         return 1;
     }
+
+    public SimpleGoal askInformation(){
+        return new SimpleGoal();
+    }
 }

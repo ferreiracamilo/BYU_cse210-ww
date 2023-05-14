@@ -10,4 +10,8 @@ public class EternalGoal : Goal{
     public override int CalculatePoints(){
         return 1;
     }
+
+    public EternalGoal askInformation(){
+        return new EternalGoal();
+    }
 }

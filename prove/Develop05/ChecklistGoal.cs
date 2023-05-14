@@ -11,4 +11,8 @@ public class ChecklistGoal : Goal{
     public override int CalculatePoints(){
         return 1;
     }
+
+    public ChecklistGoal askInformation(){
+        return new ChecklistGoal();
+    }
 }
