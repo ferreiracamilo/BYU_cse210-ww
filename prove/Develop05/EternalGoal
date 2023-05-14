@@ -25,7 +25,16 @@ public class EternalGoal : Goal{
         //asda
     }
 
-    public override Goal AskInformation(){
-        return new SimpleGoal();
+    public override void AskInformation(){
+        Console.WriteLine("\nSimple Goal: It is a goal which is repeated over the time without contraints\n");
+
+        Console.Write($"{questionGoalName} ");
+        _name = Console.ReadLine();
+        
+        Console.Write($"\n{questionGoalDescription} ");
+        _description = Console.ReadLine();
+        
+        Console.Write($"\n{questionGoalPoitns} ");
+        _rewardPoints = int.Parse(Console.ReadLine());
     }
 }

@@ -29,7 +29,16 @@ public class ReductionGoal : Goal{
         return (_completionCount * _rewardPoints) * -1;
     }
 
-    public override Goal AskInformation(){
-        return new SimpleGoal();
+    public override void AskInformation(){
+        Console.WriteLine("\nReduction Goal: This goal is meant to specify behaviors/conducts/actions to avoid its repetition. Each time that is done will decreased the total points, this is measure over the time without contraints.\n");
+
+        Console.Write($"{questionGoalName} ");
+        _name = Console.ReadLine();
+        
+        Console.Write($"\n{questionGoalDescription} ");
+        _description = Console.ReadLine();
+        
+        Console.Write($"\n{questionGoalPoitns} ");
+        _rewardPoints = int.Parse(Console.ReadLine());
     }
 }

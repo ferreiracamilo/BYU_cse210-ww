@@ -59,7 +59,16 @@ public class ChecklistGoal : Goal{
         return countPoints;
     }
 
-    public override Goal AskInformation(){
-        return new SimpleGoal();
+    public override void AskInformation(){
+        Console.WriteLine("\nChecklist Goal: It is a goal which requires a fixed amount of repetitions of a task/behavior and will provide a bonus by its total completion.\n");
+
+        Console.Write($"{questionGoalName} ");
+        _name = Console.ReadLine();
+        
+        Console.Write($"\n{questionGoalDescription} ");
+        _description = Console.ReadLine();
+        
+        Console.Write($"\n{questionGoalPoitns} ");
+        _rewardPoints = int.Parse(Console.ReadLine());
     }
 }

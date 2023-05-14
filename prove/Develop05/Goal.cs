@@ -26,6 +26,9 @@ public abstract class Goal{
         return _completionCount * _rewardPoints;
     }
 
-    public abstract Goal AskInformation();
+    /// <summary>
+    /// AskInformation: It will print the messages to ask required information and update a dummy object created previously
+    /// </summary>
+    public abstract void AskInformation();
 
 }

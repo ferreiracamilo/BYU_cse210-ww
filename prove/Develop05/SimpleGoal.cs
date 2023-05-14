@@ -39,7 +39,16 @@ public class SimpleGoal : Goal{
         }
     }
 
-    public override Goal AskInformation(){
-        return new SimpleGoal();
+    public override void AskInformation(){
+        Console.WriteLine("\nSimple Goal: It is a goal which is intended to be completed in one attempt or cycle.\n");
+
+        Console.Write($"{questionGoalName} ");
+        _name = Console.ReadLine();
+        
+        Console.Write($"\n{questionGoalDescription} ");
+        _description = Console.ReadLine();
+        
+        Console.Write($"\n{questionGoalPoitns} ");
+        _rewardPoints = int.Parse(Console.ReadLine());
     }
 }
