@@ -11,7 +11,12 @@ public abstract class Goal{
 
     public abstract void SaveGoal();
 
-    public abstract void RecordEvent();
+    /// <summary>
+    /// RecordEvent will increase the completionCount quantity by one unit
+    /// </summary>
+    public virtual void RecordEvent(){
+        _completionCount++;
+    }
 
     public abstract int CalculatePoints();
 

@@ -24,8 +24,19 @@ public class SimpleGoal : Goal{
     public override void SaveGoal(){
         //asda
     }
+
+    /// <summary>
+    /// RecordEvent: will increase the completionCount quantity by one unit only if completionCount equals zero
+    /// </summary>
+    /// <exception cref="CompletionCountException">
+    /// Thow generic exception when completionCount is greather than zero
+    /// </exception>
     public override void RecordEvent(){
-        //dasda
+        if(_completionCount == 0){
+            _completionCount++;
+        }else{
+            throw new CompletionCountException("Completion count must be equal to zero.");
+        }
     }
 
     public override int CalculatePoints(){
