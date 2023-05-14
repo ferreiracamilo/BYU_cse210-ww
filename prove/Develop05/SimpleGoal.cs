@@ -1,7 +1,7 @@
 public class SimpleGoal : Goal{
 
     /// <summary>
-    /// SimpleGoal constructor that will require 3 arguments and completion count will be set as zero by default
+    /// SimpleGoal constructor asking all parameters
     /// </summary>
     /// <param name="name">Name to assign to new Simple Goal object</param>
     /// <param name="description">Short description to assign to new Simple Goal object</param>

@@ -1,13 +1,12 @@
 public class ChecklistGoal : Goal{
 
-    // questionGoalName
     private readonly string _questionBonusQualificationGoalCount = "How many times does this goal need to be accomplished for a bonus?";
     private readonly string _questionBonusQualificationGoalRewardPoints = "What is the bonus for accomplising it that many times?";
     private int _bonusQualificationGoalCount;
     private int _bonusQualificationGoalRewardPoints;
 
     /// <summary>
-    /// ChecklistGoal constructor that will require 3 arguments and completion count will be set as zero by default
+    /// ChecklistGoal constructor asking all parameters
     /// </summary>
     /// <param name="name">Name to assign to new Simple Goal object</param>
     /// <param name="description">Short description to assign to new Simple Goal object</param>
