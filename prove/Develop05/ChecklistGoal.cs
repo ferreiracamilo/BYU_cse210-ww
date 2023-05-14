@@ -73,9 +73,9 @@ public class ChecklistGoal : Goal{
         _rewardPoints = int.Parse(Console.ReadLine());
 
         Console.Write($"\n{_questionBonusQualificationGoalCount} ");
-        _description = Console.ReadLine();
+        _bonusQualificationGoalCount = int.Parse(Console.ReadLine());
 
         Console.Write($"\n{_questionBonusQualificationGoalRewardPoints} ");
-        _description = Console.ReadLine();
+        _bonusQualificationGoalRewardPoints = int.Parse(Console.ReadLine());
     }
 }
