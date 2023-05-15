@@ -52,7 +52,7 @@ class Program
                         break;
                     case 3:
                         Console.Clear();
-                        Console.Write("What is the filename for the goal file" );
+                        Console.Write("What is the filename for the goal file? " );
                         fileName = Console.ReadLine();
                         using (StreamWriter outputFile = new StreamWriter(fileName)){
                             foreach(Goal g in _goalList){
@@ -62,7 +62,7 @@ class Program
                         break;
                     case 4:
                         Console.Clear();
-                        Console.Write("What is the filename for the goal file" );
+                        Console.Write("What is the filename for the goal file? " );
                         fileName = Console.ReadLine();
                         _goalList = LoadGoals(fileName);
                         break;
