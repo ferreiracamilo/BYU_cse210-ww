@@ -64,40 +64,7 @@ class Program
                         Console.Clear();
                         Console.Write("What is the filename for the goal file" );
                         fileName = Console.ReadLine();
-                        string[] lines = System.IO.File.ReadAllLines(fileName);
-                        foreach (string line in lines)
-                        {
-                            string[] parts = line.Split(",");
-
-                            string goalType = parts[0];
-                            string goalName = parts[1];
-                            string goalDescription = parts[2];
-                            int goalRewardPoints = int.Parse(parts[3]);
-                            int goalCompletionCount = int.Parse(parts[4]);
-
-                            switch(goalType){
-                                case "ChecklistGoal":
-                                    int goalBonusQualificationGoalCount = int.Parse(parts[5]);
-                                    int goalBonusQualificationGoalRewardPoints = int.Parse(parts[6]);
-                                    ChecklistGoal checkGoal = new ChecklistGoal(goalType, goalDescription, goalRewardPoints, goalCompletionCount, goalBonusQualificationGoalCount, goalBonusQualificationGoalRewardPoints);
-                                    _goalList.Add(checkGoal);
-                                    break;
-                                case "ReductionGoal":
-                                    ReductionGoal reductionGoal = new ReductionGoal(goalType, goalDescription, goalRewardPoints, goalCompletionCount);
-                                    _goalList.Add(reductionGoal);
-                                    break;
-                                case "SimpleGoal":
-                                    SimpleGoal simpleGoal = new SimpleGoal(goalType, goalDescription, goalRewardPoints, goalCompletionCount);
-                                    _goalList.Add(simpleGoal);
-                                    break;
-                                case "EternalGoal":
-                                    EternalGoal eternalGoal = new EternalGoal(goalType, goalDescription, goalRewardPoints, goalCompletionCount);
-                                    _goalList.Add(eternalGoal);
-                                    break;
-                            }
-
-                        }
-
+                        _goalList = LoadGoals(fileName);
                         break;
                     case 5:
                         int _totalPoints = 0;
@@ -152,4 +119,41 @@ class Program
         option = int.Parse(Console.ReadLine());
         return option;
     }
+
+    private static List<Goal> LoadGoals(string fileName){
+        List<Goal> _goalList = new List<Goal>();
+        string[] lines = System.IO.File.ReadAllLines(fileName);
+        foreach (string line in lines){
+            string[] parts = line.Split(",");
+
+            string goalType = parts[0];
+            string goalName = parts[1];
+            string goalDescription = parts[2];
+            int goalRewardPoints = int.Parse(parts[3]);
+            int goalCompletionCount = int.Parse(parts[4]);
+
+            switch(goalType){
+                case "ChecklistGoal":
+                    int goalBonusQualificationGoalCount = int.Parse(parts[5]);
+                    int goalBonusQualificationGoalRewardPoints = int.Parse(parts[6]);
+                    ChecklistGoal checkGoal = new ChecklistGoal(goalType, goalDescription, goalRewardPoints, goalCompletionCount, goalBonusQualificationGoalCount, goalBonusQualificationGoalRewardPoints);
+                    _goalList.Add(checkGoal);
+                    break;
+                case "ReductionGoal":
+                    ReductionGoal reductionGoal = new ReductionGoal(goalType, goalDescription, goalRewardPoints, goalCompletionCount);
+                    _goalList.Add(reductionGoal);
+                    break;
+                case "SimpleGoal":
+                    SimpleGoal simpleGoal = new SimpleGoal(goalType, goalDescription, goalRewardPoints, goalCompletionCount);
+                    _goalList.Add(simpleGoal);
+                    break;
+                case "EternalGoal":
+                    EternalGoal eternalGoal = new EternalGoal(goalType, goalDescription, goalRewardPoints, goalCompletionCount);
+                    _goalList.Add(eternalGoal);
+                    break;
+            }
+        }
+        return _goalList;
+    }
+
 }
