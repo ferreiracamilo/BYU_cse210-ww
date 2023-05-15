@@ -41,8 +41,4 @@ public abstract class Goal{
         return _name;
     }
 
-    public int GetBaseRewardPoints(){
-        return _rewardPoints;
-    }
-
 }
