@@ -46,6 +46,10 @@ public class ChecklistGoal : Goal{
     public override void RecordEvent(){
         if(_completionCount < _bonusQualificationGoalCount){
             _completionCount++;
+            Console.WriteLine($"Congratulations! You have earned {_rewardPoints} points!");
+            if(_completionCount == _bonusQualificationGoalCount){
+                Console.WriteLine($"Congratulations! You have earned the bonus reward, {_bonusQualificationGoalRewardPoints} points more!");
+            }
         }else{
             throw new CompletionCountException("Completion count must be lower or equal to bonus threshold, goal was achieved already.");
         }

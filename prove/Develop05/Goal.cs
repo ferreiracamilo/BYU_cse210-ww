@@ -14,9 +14,7 @@ public abstract class Goal{
     /// <summary>
     /// RecordEvent will increase the completionCount quantity by one unit
     /// </summary>
-    public virtual void RecordEvent(){
-        _completionCount++;
-    }
+    public abstract void RecordEvent();
 
     /// <summary>
     /// CalculatePoints: It will calculate points obtained either based on completion count and/or bonus obtained if applies
@@ -41,6 +39,10 @@ public abstract class Goal{
 
     public string GetName(){
         return _name;
+    }
+
+    public int GetBaseRewardPoints(){
+        return _rewardPoints;
     }
 
 }

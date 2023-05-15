@@ -2,50 +2,78 @@ using System;
 
 class Program
 {
+    /*
+    
+    DATA SAMPLE
+
+    *** SIMPLE GOAL ***
+    Name: Give a talk
+    Description: Speak in Sacrament meeting when asked
+    Base points: 100
+
+    *** ETERNAL GOAL ***
+    Name: Study the scriptures
+    Description: Study for at least 10 minutes
+    Base points: 50
+
+    *** CHECKLIST GOAL ***
+    Name: Attend the temple
+    Description: Attend and perform any ordinance
+    Base points: 50
+    Bonus Quantity Goal: 3
+    Bonus Points: 500
+
+    *** REDUCTION GOAL ***
+    Name: Institute Online Gathering Disruption
+    Description: Watching TV meanwhile institute online gathering
+    Base points: 30
+
+     */
+
     static void Main(string[] args){
-        int option = 0;
-        int counter = 0;
-        List<Goal> goalList = new List<Goal>();
+        int _option = 0;
+        int _counter;
+        List<Goal> _goalList = new List<Goal>();
 
         do{
-            option = PrintMenu();
-            if(option != 6){
-                switch(option){
+            _option = PrintMenu();
+            if(_option != 6){
+                switch(_option){
                     case 1:
-                        int goalType;
+                        int _goalType;
                         Console.Clear();
-                        goalType = PrintMenuGoalCreation();
+                        _goalType = PrintMenuGoalCreation();
 
-                        switch(goalType){
+                        switch(_goalType){
                             case 1:
                                 SimpleGoal simpleGoal = new SimpleGoal();
                                 simpleGoal.AskInformation();
-                                goalList.Add(simpleGoal);
+                                _goalList.Add(simpleGoal);
                                 break;
                             case 2:
                                 EternalGoal eternalGoal = new EternalGoal();
                                 eternalGoal.AskInformation();
-                                goalList.Add(eternalGoal);
+                                _goalList.Add(eternalGoal);
                                 break;
                             case 3:
                                 ChecklistGoal checklistGoal = new ChecklistGoal();
                                 checklistGoal.AskInformation();
-                                goalList.Add(checklistGoal);
+                                _goalList.Add(checklistGoal);
                                 break;
                             case 4:
                                 ReductionGoal reductionGoal = new ReductionGoal();
                                 reductionGoal.AskInformation();
-                                goalList.Add(reductionGoal);
+                                _goalList.Add(reductionGoal);
                                 break;
                         }
 
                         break;
                     case 2:
                         Console.Clear();
-                        counter = 1;
-                        foreach(Goal g in goalList){    
-                            Console.WriteLine($"{counter}. {g.ToText(true)}");
-                            counter++;
+                        _counter = 1;
+                        foreach(Goal g in _goalList){    
+                            Console.WriteLine($"{_counter}. {g.ToText(true)}");
+                            _counter++;
                         }
                         break;
                     case 3:
@@ -53,16 +81,32 @@ class Program
                     case 4:
                         break;
                     case 5:
+                        int _totalPoints = 0;
+                        int _goalOption = 0;
+                        _counter = 1;
+
                         Console.Clear();
-                        counter = 1;
-                        foreach(Goal g in goalList){    
-                            Console.WriteLine($"{counter}. {g.ToText(true)}");
-                            counter++;
+                        
+                        foreach(Goal g in _goalList){    
+                            Console.WriteLine($"{_counter}. {g.GetName()}");
+                            _counter++;
                         }
+
+                        Console.Write("\nWhich goal did you accomplished or missbehavior you committed? ");
+                        _goalOption = int.Parse(Console.ReadLine());
+
+                        Goal goalToLoadEvent = _goalList[_goalOption-1];
+                        goalToLoadEvent.RecordEvent();
+                        
+                        foreach(Goal g in _goalList){
+                            int check = g.CalculatePoints();
+                            _totalPoints += g.CalculatePoints();
+                        }
+                        Console.WriteLine($"\nYou have accumulated {_totalPoints} points so far.");
                         break;
                 }
             }
-        }while(option != 6);
+        }while(_option != 6);
     }
 
     private static int PrintMenu(){

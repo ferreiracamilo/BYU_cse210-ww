@@ -35,6 +35,7 @@ public class SimpleGoal : Goal{
     public override void RecordEvent(){
         if(_completionCount == 0){
             _completionCount++;
+            Console.WriteLine($"Congratulations! You have earned {_rewardPoints} points!");
         }else{
             throw new CompletionCountException("Completion count must be equal to zero, goal was achieved already.");
         }

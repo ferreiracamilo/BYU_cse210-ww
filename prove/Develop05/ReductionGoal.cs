@@ -26,6 +26,11 @@ public class ReductionGoal : Goal{
         //asda
     }
 
+    public override void RecordEvent(){
+        _completionCount++;
+        Console.WriteLine($"Bad Luck! You have lost {_rewardPoints} points!");
+    }
+
     public override int CalculatePoints(){
         return (_completionCount * _rewardPoints) * -1;
     }
@@ -45,14 +50,9 @@ public class ReductionGoal : Goal{
 
     public override string ToText(Boolean isShort){
         string objectFormatted = "";
-        string statusBox = "X";
-
-        if(_completionCount == 0){
-            statusBox = " ";
-        }
 
         if(isShort){
-            objectFormatted=$"[{statusBox}] {_name} ({_description}) -if there's no 'X' you succeeded-";
+            objectFormatted=$"[ ] {_name} ({_description})";
         }else{
             objectFormatted=$"ReductionGoal,{_name},{_description},{_rewardPoints},{_completionCount}";
         }

@@ -26,6 +26,11 @@ public class EternalGoal : Goal{
         //asda
     }
 
+    public override void RecordEvent(){
+        _completionCount++;
+        Console.WriteLine($"Congratulations! You have earned {_rewardPoints} points!");
+    }
+
     public override void AskInformation(){
         Console.WriteLine("\nSimple Goal: It is a goal which is repeated over the time without contraints\n");
 
@@ -41,14 +46,9 @@ public class EternalGoal : Goal{
 
     public override string ToText(Boolean isShort){
         string objectFormatted = "";
-        string statusBox = " ";
-
-        if(_completionCount >= 1){
-            statusBox = "X";
-        }
 
         if(isShort){
-            objectFormatted=$"[{statusBox}] {_name} ({_description})";
+            objectFormatted=$"[ ] {_name} ({_description})";
         }else{
             objectFormatted=$"EternalGoal,{_name},{_description},{_rewardPoints},{_completionCount}";
         }
