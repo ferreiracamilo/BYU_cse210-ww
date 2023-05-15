@@ -95,11 +95,10 @@ class Program
                         Console.Write("\nWhich goal did you accomplished or missbehavior you committed? ");
                         _goalOption = int.Parse(Console.ReadLine());
 
-                        Goal goalToLoadEvent = _goalList[_goalOption-1];
-                        goalToLoadEvent.RecordEvent();
+                        Goal _goalToLoadEvent = _goalList[_goalOption-1];
+                        _goalToLoadEvent.RecordEvent();
                         
                         foreach(Goal g in _goalList){
-                            int check = g.CalculatePoints();
                             _totalPoints += g.CalculatePoints();
                         }
                         Console.WriteLine($"\nYou have accumulated {_totalPoints} points so far.");
