@@ -90,7 +90,7 @@ public class ChecklistGoal : Goal{
         }
 
         if(isShort){
-            objectFormatted=$"[{statusBox}] {_name} ({_description})";
+            objectFormatted=$"[{statusBox}] {_name} ({_description}) -- Currently completed: {_completionCount}/{_bonusQualificationGoalCount}";
         }else{
             objectFormatted=$"ChecklistGoal,{_name},{_description},{_rewardPoints},{_completionCount},{_bonusQualificationGoalCount},{_bonusQualificationGoalRewardPoints}";
         }

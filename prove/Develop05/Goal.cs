@@ -39,4 +39,8 @@ public abstract class Goal{
     /// <returns>A string representing in natural language the information of the object</returns>
     public abstract string ToText(Boolean isShort);
 
+    public string GetName(){
+        return _name;
+    }
+
 }

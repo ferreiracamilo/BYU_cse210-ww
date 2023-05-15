@@ -4,6 +4,7 @@ class Program
 {
     static void Main(string[] args){
         int option = 0;
+        int counter = 0;
         List<Goal> goalList = new List<Goal>();
 
         do{
@@ -40,12 +41,24 @@ class Program
 
                         break;
                     case 2:
+                        Console.Clear();
+                        counter = 1;
+                        foreach(Goal g in goalList){    
+                            Console.WriteLine($"{counter}. {g.ToText(true)}");
+                            counter++;
+                        }
                         break;
                     case 3:
                         break;
                     case 4:
                         break;
                     case 5:
+                        Console.Clear();
+                        counter = 1;
+                        foreach(Goal g in goalList){    
+                            Console.WriteLine($"{counter}. {g.ToText(true)}");
+                            counter++;
+                        }
                         break;
                 }
             }
