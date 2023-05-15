@@ -1,0 +1,23 @@
+DATA SAMPLE SUGGESTED
+
+*** SIMPLE GOAL ***
+Name: Give a talk
+Description: Speak in Sacrament meeting when asked
+Base points: 100
+
+*** ETERNAL GOAL ***
+Name: Study the scriptures
+Description: Study for at least 10 minutes
+Base points: 50
+
+*** CHECKLIST GOAL ***
+Name: Attend the temple
+Description: Attend and perform any ordinance
+Base points: 50
+Bonus Quantity Goal: 3
+Bonus Points: 500
+
+*** REDUCTION GOAL ***
+Name: Institute Online Gathering Disruption
+Description: Watching TV meanwhile institute online gathering
+Base points: 30

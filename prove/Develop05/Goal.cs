@@ -9,8 +9,6 @@ public abstract class Goal{
     protected int _rewardPoints;
     protected int _completionCount;
 
-    public abstract void SaveGoal();
-
     /// <summary>
     /// RecordEvent will increase the completionCount quantity by one unit
     /// </summary>

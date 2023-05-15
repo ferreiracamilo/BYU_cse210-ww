@@ -22,10 +22,6 @@ public class ReductionGoal : Goal{
         _completionCount = 0;
     }
 
-    public override void SaveGoal(){
-        //asda
-    }
-
     public override void RecordEvent(){
         _completionCount++;
         Console.WriteLine($"Bad Luck! You have lost {_rewardPoints} points!");

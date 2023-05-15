@@ -33,10 +33,6 @@ public class ChecklistGoal : Goal{
         _completionCount = 0;
     }
 
-    public override void SaveGoal(){
-        //asda
-    }
-
     /// <summary>
     /// RecordEvent: will increase the completionCount quantity by one unit only if completionCount equals zero
     /// </summary>

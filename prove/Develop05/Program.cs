@@ -1,38 +1,12 @@
 using System;
+using System.IO;
 
 class Program
 {
-    /*
-    
-    DATA SAMPLE
-
-    *** SIMPLE GOAL ***
-    Name: Give a talk
-    Description: Speak in Sacrament meeting when asked
-    Base points: 100
-
-    *** ETERNAL GOAL ***
-    Name: Study the scriptures
-    Description: Study for at least 10 minutes
-    Base points: 50
-
-    *** CHECKLIST GOAL ***
-    Name: Attend the temple
-    Description: Attend and perform any ordinance
-    Base points: 50
-    Bonus Quantity Goal: 3
-    Bonus Points: 500
-
-    *** REDUCTION GOAL ***
-    Name: Institute Online Gathering Disruption
-    Description: Watching TV meanwhile institute online gathering
-    Base points: 30
-
-     */
-
     static void Main(string[] args){
         int _option = 0;
         int _counter;
+        string fileName;
         List<Goal> _goalList = new List<Goal>();
 
         do{
@@ -77,8 +51,53 @@ class Program
                         }
                         break;
                     case 3:
+                        Console.Clear();
+                        Console.Write("What is the filename for the goal file" );
+                        fileName = Console.ReadLine();
+                        using (StreamWriter outputFile = new StreamWriter(fileName)){
+                            foreach(Goal g in _goalList){
+                                outputFile.WriteLine(g.ToText(false)); 
+                            }
+                        }
                         break;
                     case 4:
+                        Console.Clear();
+                        Console.Write("What is the filename for the goal file" );
+                        fileName = Console.ReadLine();
+                        string[] lines = System.IO.File.ReadAllLines(fileName);
+                        foreach (string line in lines)
+                        {
+                            string[] parts = line.Split(",");
+
+                            string goalType = parts[0];
+                            string goalName = parts[1];
+                            string goalDescription = parts[2];
+                            int goalRewardPoints = int.Parse(parts[3]);
+                            int goalCompletionCount = int.Parse(parts[4]);
+
+                            switch(goalType){
+                                case "ChecklistGoal":
+                                    int goalBonusQualificationGoalCount = int.Parse(parts[5]);
+                                    int goalBonusQualificationGoalRewardPoints = int.Parse(parts[6]);
+                                    ChecklistGoal checkGoal = new ChecklistGoal(goalType, goalDescription, goalRewardPoints, goalCompletionCount, goalBonusQualificationGoalCount, goalBonusQualificationGoalRewardPoints);
+                                    _goalList.Add(checkGoal);
+                                    break;
+                                case "ReductionGoal":
+                                    ReductionGoal reductionGoal = new ReductionGoal(goalType, goalDescription, goalRewardPoints, goalCompletionCount);
+                                    _goalList.Add(reductionGoal);
+                                    break;
+                                case "SimpleGoal":
+                                    SimpleGoal simpleGoal = new SimpleGoal(goalType, goalDescription, goalRewardPoints, goalCompletionCount);
+                                    _goalList.Add(simpleGoal);
+                                    break;
+                                case "EternalGoal":
+                                    EternalGoal eternalGoal = new EternalGoal(goalType, goalDescription, goalRewardPoints, goalCompletionCount);
+                                    _goalList.Add(eternalGoal);
+                                    break;
+                            }
+
+                        }
+
                         break;
                     case 5:
                         int _totalPoints = 0;

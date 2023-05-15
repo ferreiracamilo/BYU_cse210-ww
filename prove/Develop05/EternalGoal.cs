@@ -22,10 +22,6 @@ public class EternalGoal : Goal{
         _completionCount = 0;
     }
 
-    public override void SaveGoal(){
-        //asda
-    }
-
     public override void RecordEvent(){
         _completionCount++;
         Console.WriteLine($"Congratulations! You have earned {_rewardPoints} points!");
