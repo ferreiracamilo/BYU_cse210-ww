@@ -1,4 +1,4 @@
-interface ISampleInterface
+interface IValidationData
 {
     Boolean ValidateEmail(string email);
 
