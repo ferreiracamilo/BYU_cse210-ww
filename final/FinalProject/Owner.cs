@@ -8,6 +8,10 @@ public class Owner : IValidationData{
     private string _phoneNumber;
     private string _address;
     private string _email;
+
+    public void AddPet(Pet pet){
+        _petList.Add(pet);
+    }
     
     Boolean IValidationData.ValidateEmail(string email)
     {
