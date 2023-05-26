@@ -1,5 +1,4 @@
-interface IValidationData
-{
+interface IValidationData{
     /// <summary>
     /// Validate if an email address is correct
     /// </summary>
