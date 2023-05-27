@@ -1,7 +1,7 @@
 public abstract class Treatment{
     protected DateOnly _startDate;
     protected Pet _patient;
-
+    protected int _id;
     protected Boolean _isCompleted;
 
     public virtual void SetStartDate(DateOnly date){
