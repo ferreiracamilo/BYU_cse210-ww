@@ -1,4 +1,4 @@
-public class Pet{
+public class Pet : IDataSL{
     private string _name;
     private DateOnly _birthdate;
     private string _animalType;
@@ -6,4 +6,8 @@ public class Pet{
     private List<string> _allergies;
     private DateOnly _joinDate;
     private int _id;
+
+    string IDataSL.StringRepresentation(){
+        throw new NotImplementedException();
+    }
 }

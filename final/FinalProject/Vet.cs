@@ -1,6 +1,6 @@
 using System.Text.RegularExpressions;
 
-public class Vet : IValidationData{
+public class Vet : IValidationData, IDataSL{
     private int _docId;
     private string _phoneNumber;
     private string _address;
@@ -32,5 +32,9 @@ public class Vet : IValidationData{
         }
         
         return true;
+    }
+
+    string IDataSL.StringRepresentation(){
+        throw new NotImplementedException();
     }
 }

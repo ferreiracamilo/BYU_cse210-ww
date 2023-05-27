@@ -1,4 +1,4 @@
-public class Diagnostic{
+public class Diagnostic : IDataSL{
     private List<string> _reports;
     private Pet _patient;
     private DateOnly _date;
@@ -7,5 +7,9 @@ public class Diagnostic{
 
     public void AddReport(string report){
         _reports.Add(report);
+    }
+
+    string IDataSL.StringRepresentation(){
+        throw new NotImplementedException();
     }
 }

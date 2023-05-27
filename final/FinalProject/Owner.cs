@@ -1,6 +1,6 @@
 using System.Text.RegularExpressions;
 
-public class Owner : IValidationData{
+public class Owner : IValidationData, IDataSL{
 
     private List<Pet> _petList;
     private int _docId;
@@ -37,5 +37,9 @@ public class Owner : IValidationData{
         }
         
         return true;
+    }
+
+    string IDataSL.StringRepresentation(){
+        throw new NotImplementedException();
     }
 }
