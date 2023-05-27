@@ -1,6 +1,6 @@
 using System.Text.RegularExpressions;
 
-public class Owner : IValidationData, IDataSL{
+public class Owner : IDataSL{
 
     private List<Pet> _petList;
     private int _docId;
@@ -13,31 +13,7 @@ public class Owner : IValidationData, IDataSL{
         _petList.Add(pet);
     }
     
-    Boolean IValidationData.ValidateEmail(string email)
-    {
-        if (string.IsNullOrWhiteSpace(email))
 
-            return false;
-        
-        // Regular expression pattern to validate email addresses
-        string pattern = @"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$";
-        
-        return Regex.IsMatch(email, pattern);
-    }
-
-    Boolean IValidationData.ValidatePhone(string phone)
-    {
-        if (string.IsNullOrEmpty(phone))
-            return false;
-        
-        foreach (char c in phone)
-        {
-            if (!char.IsDigit(c) && c != '-')
-                return false;
-        }
-        
-        return true;
-    }
 
     string IDataSL.StringRepresentation(){
         throw new NotImplementedException();
