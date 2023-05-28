@@ -5,4 +5,8 @@ public class Surgery : Treatment, IDataSL{
     string IDataSL.StringRepresentation(){
         throw new NotImplementedException();
     }
+
+    public void AddProcedure(string procedure){
+        _procedures.Add(procedure);
+    }
 }
