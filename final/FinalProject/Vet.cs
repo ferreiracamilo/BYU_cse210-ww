@@ -9,6 +9,12 @@ public class Vet : IDataSL{
     private bool _isActive;
 
     public Vet(int docId, string phoneNumber, string address, string email){
+        if(!Utils.ValidateEmail(email)){
+            throw new EmailValidationException("Email argument is not an actual email address.");
+        }
+        if(!Utils.ValidateEmail(phoneNumber)){
+            throw new PhoneNumberValidationException("Phone argument is not an actual phone number.");
+        }
         _docId = docId;
         _phoneNumber = phoneNumber;
         _address = address;
