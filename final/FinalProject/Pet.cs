@@ -26,7 +26,8 @@ public class Pet : IDataSL{
     }
 
     public string StringRepresentation(){
-        return $"{_name}";
+        string allergies = Utils.ListToString(_allergies);
+        return $"{_name};{_birthdate};{_animalType};{_breed};{allergies};{_joinDate};{_id}";
     }
 
 
