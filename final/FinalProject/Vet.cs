@@ -6,7 +6,7 @@ public class Vet : IDataSL{
     private string _address;
     private string _email;
     private DateOnly _startDate;
-    private Boolean _isActive;
+    private bool _isActive;
 
     public Vet(int docId, string phoneNumber, string address, string email){
         _docId = docId;
