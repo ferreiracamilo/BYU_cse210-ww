@@ -1,8 +1,8 @@
 public abstract class Treatment{
     protected DateOnly _startDate;
     protected Pet _patient;
-
-    protected Boolean _isCompleted;
+    protected int _id;
+    protected bool _isCompleted;
 
     public virtual void SetStartDate(DateOnly date){
         _startDate = date;
@@ -20,12 +20,11 @@ public abstract class Treatment{
         return _patient;
     }
 
-    public virtual void SetIsCompleted(Boolean isCompleted){
+    public virtual void SetIsCompleted(bool isCompleted){
         _isCompleted = isCompleted;
     }
 
-    public virtual Boolean GetIsCompleted(){
+    public virtual bool GetIsCompleted(){
         return _isCompleted;
     }
-
 }
