@@ -57,8 +57,8 @@ public static class Utils{
     /// Validate if a given string is a phone number by assuring contains only digits and/or -
     /// </summary>
     /// <param name="phone">String</param>
-    /// <returns>Boolean</returns>
-    public static Boolean ValidatePhone(string phone){
+    /// <returns>bool</returns>
+    public static bool ValidatePhone(string phone){
         if (string.IsNullOrEmpty(phone))
             return false;
         
