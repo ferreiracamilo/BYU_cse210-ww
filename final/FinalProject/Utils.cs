@@ -41,8 +41,8 @@ public static class Utils{
     /// Validate if an email address is correct
     /// </summary>
     /// <param name="email">String</param>
-    /// <returns>Boolean</returns>
-    public static Boolean ValidateEmail(string email){
+    /// <returns>bool</returns>
+    public static bool ValidateEmail(string email){
         if (string.IsNullOrWhiteSpace(email))
 
             return false;
