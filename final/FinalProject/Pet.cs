@@ -3,7 +3,7 @@ public class Pet : IDataSL{
     private DateOnly _birthdate;
     private string _animalType;
     private string _breed;
-    private List<string> _allergies;
+    private List<string> _allergies = new List<string>();
     private DateOnly _joinDate;
     private int _id;
 
@@ -25,8 +25,16 @@ public class Pet : IDataSL{
         _id = id;
     }
 
+    public void AddAllergy(string allergy){
+        _allergies.Add(allergy);
+    }
+
     public string StringRepresentation(){
-        string allergies = Utils.ListToString(_allergies);
+        string allergies = "";
+        int newa = _allergies.Count();
+        if(_allergies.Count() > 0){
+            allergies = Utils.ListToString(_allergies);
+        }
         return $"{_name};{_birthdate};{_animalType};{_breed};{allergies};{_joinDate};{_id}";
     }
 

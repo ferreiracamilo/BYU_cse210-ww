@@ -11,9 +11,9 @@ public static class Utils{
         string finalword = "";
         for(int i=0; i<list.Count(); i++){
             if(i != list.Count()-1){
-                finalword = list[i] + ",";
+                finalword += list[i] + ",";
             }else{
-                finalword = list[i];
+                finalword += list[i];
             }
         }
         return finalword;
