@@ -27,5 +27,4 @@ public abstract class Treatment{
     public virtual bool GetIsCompleted(){
         return _isCompleted;
     }
-
 }

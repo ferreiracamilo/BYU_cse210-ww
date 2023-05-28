@@ -4,7 +4,7 @@ public class Drug : IDataSL{
     private string _presentation;
     private int _id;
 
-    string IDataSL.StringRepresentation(){
-        throw new NotImplementedException();
+    public string StringRepresentation(){
+        return "a";
     }
 }

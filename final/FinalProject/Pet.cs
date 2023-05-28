@@ -7,7 +7,7 @@ public class Pet : IDataSL{
     private DateOnly _joinDate;
     private int _id;
 
-    string IDataSL.StringRepresentation(){
-        throw new NotImplementedException();
+    public string StringRepresentation(){
+        return "a";
     }
 }

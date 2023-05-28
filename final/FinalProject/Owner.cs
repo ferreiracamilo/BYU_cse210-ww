@@ -12,10 +12,8 @@ public class Owner : IDataSL{
     public void AddPet(Pet pet){
         _petList.Add(pet);
     }
-    
 
-
-    string IDataSL.StringRepresentation(){
-        throw new NotImplementedException();
+    public string StringRepresentation(){
+        return "a";
     }
 }

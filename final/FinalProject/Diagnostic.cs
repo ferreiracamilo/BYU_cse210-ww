@@ -10,7 +10,7 @@ public class Diagnostic : IDataSL{
         _reports.Add(report);
     }
 
-    string IDataSL.StringRepresentation(){
-        throw new NotImplementedException();
+    public string StringRepresentation(){
+        return "a";
     }
 }

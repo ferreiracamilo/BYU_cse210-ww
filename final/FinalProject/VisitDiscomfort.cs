@@ -5,7 +5,7 @@ public class VisitDiscomfort : Visit, IDataSL{
         _synthoms.Add(synthom);
     }
 
-    string IDataSL.StringRepresentation(){
-        throw new NotImplementedException();
+    public string StringRepresentation(){
+        return "a";
     }
 }

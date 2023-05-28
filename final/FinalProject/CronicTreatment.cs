@@ -7,7 +7,7 @@ public class CronicTreatment : Treatment, IDataSL{
         _drugs.Add(drug);
     }
 
-    string IDataSL.StringRepresentation(){
-        throw new NotImplementedException();
+    public string StringRepresentation(){
+        return "a";
     }
 }

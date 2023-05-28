@@ -5,7 +5,7 @@ public class VisitControl : Visit, IDataSL{
         _valuations.Add(valuation);
     }
 
-    string IDataSL.StringRepresentation(){
-        throw new NotImplementedException();
+    public string StringRepresentation(){
+        return "a";
     }
 }
