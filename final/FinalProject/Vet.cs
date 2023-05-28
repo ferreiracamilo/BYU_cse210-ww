@@ -8,7 +8,16 @@ public class Vet : IDataSL{
     private DateOnly _startDate;
     private Boolean _isActive;
 
+    public Vet(int docId, string phoneNumber, string address, string email){
+        _docId = docId;
+        _phoneNumber = phoneNumber;
+        _address = address;
+        _email = email;
+        _startDate = DateOnly.FromDateTime(DateTime.Now);
+        _isActive = true;
+    }
+
     string IDataSL.StringRepresentation(){
-        throw new NotImplementedException();
+        return $"{_docId},{_phoneNumber},{_address},{_email},{_startDate},{_isActive}";
     }
 }
