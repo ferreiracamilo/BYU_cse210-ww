@@ -17,7 +17,7 @@ public class Vet : IDataSL{
         _isActive = true;
     }
 
-    string IDataSL.StringRepresentation(){
-        return $"{_docId},{_phoneNumber},{_address},{_email},{_startDate},{_isActive}";
+    public string StringRepresentation(){
+        return $"{_docId};{_phoneNumber};{_address};{_email};{_startDate};{_isActive}";
     }
 }

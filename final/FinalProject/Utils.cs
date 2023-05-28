@@ -7,7 +7,7 @@ public static class Utils{
     /// </summary>
     /// <param name="list">List<string></param>
     /// <returns>string</returns>
-    public static string listToString(List<string> list){
+    public static string ListToString(List<string> list){
         string finalword = "";
         for(int i=0; i<list.Count(); i++){
             if(i != list.Count()-1){
@@ -20,20 +20,11 @@ public static class Utils{
     }
 
     /// <summary>
-    /// Turn a string into a Date
-    /// </summary>
-    /// <param name="date">DateOnly</param>
-    /// <returns>string</returns>
-    public static string dateToString(DateOnly date){
-        return date.ToString("dd/MM/yyyy");
-    }
-
-    /// <summary>
     /// Turn a string into a DateOnly data
     /// </summary>
     /// <param name="sDate">string</param>
     /// <returns>string</returns>
-    public static DateOnly stringToDate(string sDate){
+    public static DateOnly StringToDate(string sDate){
         return DateOnly.Parse(sDate);
     }
 
