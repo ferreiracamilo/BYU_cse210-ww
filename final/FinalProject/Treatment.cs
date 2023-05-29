@@ -27,4 +27,12 @@ public abstract class Treatment{
     public virtual bool GetIsCompleted(){
         return _isCompleted;
     }
+
+    public virtual void SetId(int id){
+        _id = id;
+    }
+
+    public virtual int GetId(){
+        return _id;
+    }
 }
