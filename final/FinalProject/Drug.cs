@@ -36,8 +36,6 @@ public class Drug : IDataSL{
         return _id;
     }
 
-
-
     public string StringRepresentation(){
         return "a";
     }
