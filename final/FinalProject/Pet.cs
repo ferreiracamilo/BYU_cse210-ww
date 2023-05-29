@@ -25,6 +25,16 @@ public class Pet : IDataSL{
         _id = id;
     }
 
+    public Pet(string name, DateOnly birthDate, string animalType, string breed, DateOnly joindate, int id, List<string> allergies){
+        _name = name;
+        _birthdate = birthDate;
+        _animalType = animalType;
+        _breed = breed;
+        _joinDate = joindate;
+        _id = id;
+        _allergies = allergies;
+    }
+
     public void AddAllergy(string allergy){
         _allergies.Add(allergy);
     }
