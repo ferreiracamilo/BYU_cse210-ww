@@ -48,6 +48,54 @@ public class Owner : IDataSL{
         _petList = petList;
     }
 
+    public void SetPetList(List<Pet> petList){
+        _petList = petList;
+    }
+
+    public List<Pet> GetPetList(){
+        return _petList;
+    }
+
+    public void SetDocId(int docId){
+        _docId = docId;
+    }
+
+    public int GetDocId(){
+        return _docId;
+    }
+
+    public void SetMonthlyPaymentMethd(string paymentMethod){
+        _monthlyFeePaymentMethod = paymentMethod;
+    }
+
+    public string GetMonthlyPaymentMethd(){
+        return _monthlyFeePaymentMethod;
+    }
+
+    public void SetPhoneNumber(string phoneNumber){
+        _phoneNumber = phoneNumber;
+    }
+
+    public string GetPhoneNumber(){
+        return _phoneNumber;
+    }
+
+    public void SetAddress(string address){
+        _address = address;
+    }
+
+    public string GetAddress(){
+        return _address;
+    }
+
+    public void SetEmail(string email){
+        _email = email;
+    }
+
+    public string GetEmail(){
+        return _email;
+    }
+
     public void AddPet(Pet pet){
         _petList.Add(pet);
     }
