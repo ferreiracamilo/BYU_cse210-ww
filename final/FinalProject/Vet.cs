@@ -72,6 +72,46 @@ public class Vet : IDataSL{
         _isActive = status;
     }
 
+    public void SetDocId(int docId){
+        _docId = docId;
+    }
+
+    public int GetDocid(){
+        return _docId;
+    }
+
+    public void SetAddress(string address){
+        _address = address;
+    }
+
+    public string GetAddress(){
+        return _address;
+    }
+
+    public void SetEmail(string email){
+        _email = email;
+    }
+
+    public string GetEmail(){
+        return _email;
+    }
+
+    public void SetStartDate(DateOnly date){
+        _startDate = date;
+    }
+
+    public DateOnly GetStartDate(){
+        return _startDate;
+    }
+
+    public void SetIsActive(bool status){
+        _isActive = status;
+    }
+
+    public bool GetIsActive(){
+        return _isActive;
+    }
+
     public string StringRepresentation(){
         return $"{_docId};{_phoneNumber};{_address};{_email};{_startDate};{_isActive}";
     }
