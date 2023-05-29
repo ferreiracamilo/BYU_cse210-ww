@@ -54,6 +54,7 @@ public class CronicTreatment : Treatment, IDataSL{
     }
 
     public string StringRepresentation(){
-        return "a";
+        string drugs = CronicTreatment.DrugListToString(_drugs);
+        return $"{_startDate};{_patient};{_id};{_isCompleted};{_qtyWeeksPrescripted};{_qtyWeeksCompleted};{drugs}";
     }
 }

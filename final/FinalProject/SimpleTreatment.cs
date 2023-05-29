@@ -36,6 +36,7 @@ public class SimpleTreatment : Treatment, IDataSL{
     }
 
     public string StringRepresentation(){
-        return "a";
+        string drugs = SimpleTreatment.DrugListToString(_drugs);
+        return $"{_startDate};{_patient};{_id};{_isCompleted};{drugs}";
     }
 }
