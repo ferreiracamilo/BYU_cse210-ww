@@ -14,6 +14,7 @@ public class VisitDiscomfort : Visit, IDataSL{
     }
 
     public string StringRepresentation(){
-        return "a";
+        string synthoms = Utils.ListToString(_synthoms);
+        return $"{_patient};{_date};{_id};{synthoms}";
     }
 }

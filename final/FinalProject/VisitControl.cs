@@ -14,6 +14,7 @@ public class VisitControl : Visit, IDataSL{
     }
 
     public string StringRepresentation(){
-        return "a";
+        string valuations = Utils.ListToString(_valuations);
+        return $"{_patient};{_date};{_id};{valuations}";
     }
 }
