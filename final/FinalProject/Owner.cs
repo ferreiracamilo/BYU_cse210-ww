@@ -106,7 +106,30 @@ public class Owner : IDataSL{
         _petList.Add(pet);
     }
 
+    /// <summary>
+    /// Turn a List<Pet> into one string concatenate with ','
+    /// </summary>
+    /// <param name="list">List<Pet></param>
+    /// <returns>string</returns>
+    private static string PetListToString(List<Pet> list){
+        string finalword = "";
+        if(list.Count()>0){
+            for(int i=0; i<list.Count(); i++){
+                if(i != list.Count()-1){
+                    finalword += list[i].GetId + ",";
+                }else{
+                    finalword += list[i].GetId;
+                }
+            }
+        }else{
+            finalword = " ";
+        }
+        
+        return finalword;
+    }
+
     public string StringRepresentation(){
-        return "a";
+        string pets = Owner.PetListToString(_petList);
+        return $"{pets};{_docId};{_monthlyFeePaymentMethod};{_phoneNumber};{_address};{_email}";
     }
 }
