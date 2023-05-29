@@ -43,7 +43,7 @@ public class Vet : IDataSL{
         if(!Utils.ValidateEmail(email)){
             throw new EmailValidationException("Email argument is not an actual email address.");
         }
-        if(!Utils.ValidateEmail(phoneNumber)){
+        if(!Utils.ValidatePhone(phoneNumber)){
             throw new PhoneNumberValidationException("Phone argument is not an actual phone number.");
         }
         _docId = docId;
@@ -89,6 +89,9 @@ public class Vet : IDataSL{
     }
 
     public void SetEmail(string email){
+        if(!Utils.ValidateEmail(email)){
+            throw new EmailValidationException("Email argument is not an actual email address.");
+        }
         _email = email;
     }
 

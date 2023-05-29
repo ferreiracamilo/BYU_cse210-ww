@@ -73,6 +73,9 @@ public class Owner : IDataSL{
     }
 
     public void SetPhoneNumber(string phoneNumber){
+        if(!Utils.ValidatePhone(phoneNumber)){
+            throw new PhoneNumberValidationException("Phone argument is not an actual phone number.");
+        }
         _phoneNumber = phoneNumber;
     }
 
@@ -89,6 +92,9 @@ public class Owner : IDataSL{
     }
 
     public void SetEmail(string email){
+        if(!Utils.ValidateEmail(email)){
+            throw new EmailValidationException("Email argument is not an actual email address.");
+        }
         _email = email;
     }
 
