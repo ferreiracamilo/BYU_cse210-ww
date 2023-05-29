@@ -59,6 +59,7 @@ public class Diagnostic : IDataSL{
     }
 
     public string StringRepresentation(){
-        return "a";
+        string reports = Utils.ListToString(_reports);
+        return $"{reports};{_patient.GetId()};{_date};{_severity};{_vet.GetDocid()};{_id}";
     }
 }

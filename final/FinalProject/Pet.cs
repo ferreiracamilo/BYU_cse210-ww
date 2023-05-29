@@ -100,5 +100,4 @@ public class Pet : IDataSL{
         return $"{_name};{_birthdate};{_animalType};{_breed};{allergies};{_joinDate};{_id}";
     }
 
-
 }
