@@ -8,7 +8,6 @@ public class Vet : IDataSL{
     private DateOnly _startDate;
     private bool _isActive;
 
-
     /// <summary>
     /// Constructor meant to initiliaze a new object that will set by default start date as today and status as active
     /// </summary>
@@ -113,6 +112,17 @@ public class Vet : IDataSL{
 
     public bool GetIsActive(){
         return _isActive;
+    }
+
+    public void SetPhone(string phone){
+        if(!Utils.ValidatePhone(phone)){
+            throw new PhoneNumberValidationException("Phone argument is not an actual phone number.");
+        }
+        _phoneNumber = phone;
+    }
+
+    public string GetPhone(){
+        return _phoneNumber;
     }
 
     public string StringRepresentation(){
