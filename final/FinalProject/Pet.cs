@@ -35,6 +35,62 @@ public class Pet : IDataSL{
         _allergies = allergies;
     }
 
+    public void SetName(string name){
+        _name = name;
+    }
+
+    public string GetName(){
+        return _name;
+    }
+
+    public void SetBirthDate(DateOnly date){
+        _birthdate = date;
+    }
+
+    public DateOnly GetBirthDate(){
+        return _birthdate;
+    }
+
+    public void SetAnimalType(string type){
+        _animalType = type;
+    }
+
+    public string GetAnimalType(){
+        return _animalType;
+    }
+
+    public void SetBreed(string breed){
+        _breed = breed;
+    }
+
+    public string GetBreed(){
+        return _breed;
+    }
+
+    public void SetAllergies(List<string> allergies){
+        _allergies = allergies;
+    }
+
+    public List<string> GetAllergies(){
+        return _allergies;
+    }
+
+    public void SetJoinDate(DateOnly date){
+        _joinDate = date;
+    }
+
+    public DateOnly GetJoinDate(){
+        return _joinDate;
+    }
+
+    public void SetId(int id){
+        _id = id;
+    }
+
+    public int GetId(){
+        return _id;
+    }
+
     public void AddAllergy(string allergy){
         _allergies.Add(allergy);
     }
