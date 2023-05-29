@@ -1,5 +1,5 @@
 public class Surgery : Treatment, IDataSL{
-    private List<string> _procedures;
+    private List<string> _procedures = new List<string>();
     private string _anestesiaType;
 
     public void SetProcedures(List<string> procedures){

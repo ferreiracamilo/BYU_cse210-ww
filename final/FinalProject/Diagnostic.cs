@@ -1,5 +1,5 @@
 public class Diagnostic : IDataSL{
-    private List<string> _reports;
+    private List<string> _reports = new List<string>();
     private Pet _patient;
     private DateOnly _date;
     private int _severity;

@@ -1,5 +1,5 @@
 public class VisitDiscomfort : Visit, IDataSL{
-    private List<string> _synthoms;
+    private List<string> _synthoms = new List<string>();
 
     public void SetSynthoms(List<string> synthoms){
         _synthoms = synthoms;

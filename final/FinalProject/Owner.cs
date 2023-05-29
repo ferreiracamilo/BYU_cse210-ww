@@ -2,7 +2,7 @@ using System.Text.RegularExpressions;
 
 public class Owner : IDataSL{
 
-    private List<Pet> _petList;
+    private List<Pet> _petList = new List<Pet>();
     private int _docId;
     private string _monthlyFeePaymentMethod;
     private string _phoneNumber;

@@ -1,5 +1,5 @@
 public class SimpleTreatment : Treatment, IDataSL{
-    private List<Drug> _drugs;
+    private List<Drug> _drugs = new List<Drug>();
 
     public void SetDrugs(List<Drug> drugs){
         _drugs = drugs;
