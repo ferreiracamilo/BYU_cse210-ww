@@ -13,12 +13,6 @@ class Program
 
         Pet pet1 = new Pet(name, birthDate, animalType, breed, id);
 
-        Console.WriteLine("Below check string representation without allergies");
-        Console.WriteLine(pet1.StringRepresentation());
-
-        pet1.AddAllergy("gluten");
-        pet1.AddAllergy("chocolate");
-
         Console.WriteLine();
         Console.WriteLine("This is string representation with allergies");
         string one = pet1.StringRepresentation();

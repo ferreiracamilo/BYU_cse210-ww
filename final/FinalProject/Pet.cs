@@ -30,11 +30,7 @@ public class Pet : IDataSL{
     }
 
     public string StringRepresentation(){
-        string allergies = "";
-        int newa = _allergies.Count();
-        if(_allergies.Count() > 0){
-            allergies = Utils.ListToString(_allergies);
-        }
+        string allergies = Utils.ListToString(_allergies);
         return $"{_name};{_birthdate};{_animalType};{_breed};{allergies};{_joinDate};{_id}";
     }
 

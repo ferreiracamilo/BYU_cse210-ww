@@ -9,13 +9,18 @@ public static class Utils{
     /// <returns>string</returns>
     public static string ListToString(List<string> list){
         string finalword = "";
-        for(int i=0; i<list.Count(); i++){
-            if(i != list.Count()-1){
-                finalword += list[i] + ",";
-            }else{
-                finalword += list[i];
+        if(list.Count()>0){
+            for(int i=0; i<list.Count(); i++){
+                if(i != list.Count()-1){
+                    finalword += list[i] + ",";
+                }else{
+                    finalword += list[i];
+                }
             }
+        }else{
+            finalword = " ";
         }
+        
         return finalword;
     }
 
