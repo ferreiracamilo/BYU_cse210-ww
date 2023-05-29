@@ -116,9 +116,9 @@ public class Owner : IDataSL{
         if(list.Count()>0){
             for(int i=0; i<list.Count(); i++){
                 if(i != list.Count()-1){
-                    finalword += list[i].GetId + ",";
+                    finalword += list[i].GetId() + ",";
                 }else{
-                    finalword += list[i].GetId;
+                    finalword += list[i].GetId();
                 }
             }
         }else{
