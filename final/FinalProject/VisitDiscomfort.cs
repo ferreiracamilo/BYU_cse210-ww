@@ -1,6 +1,12 @@
 public class VisitDiscomfort : Visit, IDataSL{
     private List<string> _synthoms = new List<string>();
 
+    public VisitDiscomfort(Pet pet, int id){
+        _date = DateOnly.FromDateTime(DateTime.Now);
+        _id = id;
+        _patient = pet;
+    }
+
     public void SetSynthoms(List<string> synthoms){
         _synthoms = synthoms;
     }

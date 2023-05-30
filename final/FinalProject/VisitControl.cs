@@ -1,6 +1,11 @@
 public class VisitControl : Visit, IDataSL{
     private List<string> _valuations = new List<string>();
 
+    public VisitControl(Pet pet, int id){
+        _date = DateOnly.FromDateTime(DateTime.Now);
+        _id = id;
+        _patient = pet;
+    }
     public void SetValuations(List<string> valuations){
         _valuations = valuations;
     }

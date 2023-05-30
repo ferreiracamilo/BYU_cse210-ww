@@ -45,7 +45,7 @@ class Program{
         Console.WriteLine("    9. Register new diagnostic");
         Console.WriteLine("    10. Register new visit due to discomfort");
         Console.WriteLine("    11. Register new visit due to control");
-        Console.WriteLine("    12. Save current information");
+        Console.WriteLine("    12. List all information");
         Console.WriteLine("    13. Quit");
         Console.Write("Select a choice from the menu: ");
         option = int.Parse(Console.ReadLine());
@@ -200,6 +200,22 @@ class Program{
 
         return cronicTreatment;
     }
+
+    private static VisitDiscomfort RegisterVistiDiscomfort(Pet pet){
+        Console.WriteLine("\n**** VISIT DISCOMFORT REGISTRATION ****");
+
+        Console.Write("\nProvide weeks of prescription for treatment: ");
+        int durationWeeks = int.Parse(Console.ReadLine());
+
+        CronicTreatment cronicTreatment = new CronicTreatment(pet, Utils.CreateUniqueId(), durationWeeks, vet);
+
+        int randomIndex = new Random().Next(0, drugs.Count);
+        cronicTreatment.AddDrug(drugs[randomIndex]);
+
+        return cronicTreatment;
+    }
+
+
 
 
 
