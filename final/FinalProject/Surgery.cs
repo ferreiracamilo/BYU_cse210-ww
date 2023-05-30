@@ -19,7 +19,7 @@ public class Surgery : Treatment, IDataSL{
 
         string procedures = Utils.ListToString(_procedures);
 
-        return $"<< Treatment: Cronic Treatment >> ID: {_id} - Status: {status} - Start Date: {_startDate} - Anestesia Type: {_anestesiaType} \nProcedures:{procedures} \n{_vet} \n{_patient}";
+        return $"<<Treatment: Cronic Treatment>> ID: {_id} - Status: {status} - Start Date: {_startDate} - Anestesia Type: {_anestesiaType} \nProcedures:{procedures} \n{_vet} \n{_patient}";
     }
 
     public void SetProcedures(List<string> procedures){

@@ -36,7 +36,8 @@ public class Pet : IDataSL{
     }
 
     public override string ToString(){
-        return "a";
+        string allergies = Utils.ListToString(_allergies);
+        return $"<<Pet>> Name: {_name} - ID: {_id} - Animal Type: {_animalType} - Breed: {_breed} - Birthdate: {_birthdate} - Join Date: {_joinDate} - Allergies: {allergies}";
     }
 
     public void SetName(string name){

@@ -49,7 +49,7 @@ public class Owner : IDataSL{
     }
 
     public override string ToString(){
-        return "a";
+        return $"<<Owner>> Doc ID: {_docId} - Email: {_email} - Phone: {_phoneNumber} - Payment method: {_monthlyFeePaymentMethod} - Address: {_address}";
     }
 
     public void SetPetList(List<Pet> petList){

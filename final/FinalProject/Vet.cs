@@ -72,7 +72,11 @@ public class Vet : IDataSL{
     }
 
     public override string ToString(){
-        return "a";
+        string status = "Inactive";
+        if(_isActive){
+            status = "Active";
+        }
+        return $"<<Vet>> Doc ID: {_docId} - Phone: {_phoneNumber} - Email: {_email} - Address: {_address} - Status: {status} - Start Date: {_startDate}";
     }
 
     public void SetDocId(int docId){
