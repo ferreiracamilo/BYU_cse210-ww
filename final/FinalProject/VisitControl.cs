@@ -6,6 +6,7 @@ public class VisitControl : Visit, IDataSL{
         _id = id;
         _patient = pet;
     }
+    
     public void SetValuations(List<string> valuations){
         _valuations = valuations;
     }

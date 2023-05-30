@@ -201,18 +201,30 @@ class Program{
         return cronicTreatment;
     }
 
-    private static VisitDiscomfort RegisterVistiDiscomfort(Pet pet){
+    private static VisitDiscomfort RegisterVisitDiscomfort(Pet pet){
         Console.WriteLine("\n**** VISIT DISCOMFORT REGISTRATION ****");
 
-        Console.Write("\nProvide weeks of prescription for treatment: ");
-        int durationWeeks = int.Parse(Console.ReadLine());
+        Console.Write("\nProvide a synthom related to the visit: ");
+        string synthom = Console.ReadLine();
 
-        CronicTreatment cronicTreatment = new CronicTreatment(pet, Utils.CreateUniqueId(), durationWeeks, vet);
+        VisitDiscomfort visitDiscomfort = new VisitDiscomfort(pet, Utils.CreateUniqueId());
 
-        int randomIndex = new Random().Next(0, drugs.Count);
-        cronicTreatment.AddDrug(drugs[randomIndex]);
+        visitDiscomfort.AddSynthom(synthom);
 
-        return cronicTreatment;
+        return visitDiscomfort;
+    }
+
+    private static VisitControl RegisterVisitControl(Pet pet){
+        Console.WriteLine("\n**** VISIT CONTROL REGISTRATION ****");
+
+        Console.Write("\nProvide a valuation related to the visit: ");
+        string valuation = Console.ReadLine();
+
+        VisitControl visitControl = new VisitControl(pet, Utils.CreateUniqueId());
+
+        visitControl.AddValuation(valuation);
+
+        return visitControl;
     }
 
 
