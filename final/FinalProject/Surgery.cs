@@ -11,6 +11,10 @@ public class Surgery : Treatment, IDataSL{
         _vet = vet;
     }
 
+    public override string ToString(){
+        return "a";
+    }
+
     public void SetProcedures(List<string> procedures){
         _procedures = procedures;
     }

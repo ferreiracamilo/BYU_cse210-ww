@@ -35,6 +35,10 @@ public class Pet : IDataSL{
         _allergies = allergies;
     }
 
+    public override string ToString(){
+        return "a";
+    }
+
     public void SetName(string name){
         _name = name;
     }

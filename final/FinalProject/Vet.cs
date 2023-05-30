@@ -71,6 +71,10 @@ public class Vet : IDataSL{
         _isActive = status;
     }
 
+    public override string ToString(){
+        return "a";
+    }
+
     public void SetDocId(int docId){
         _docId = docId;
     }

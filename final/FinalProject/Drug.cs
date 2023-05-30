@@ -4,6 +4,10 @@ public class Drug : IDataSL{
     private string _presentation;
     private int _id;
 
+    public override string ToString(){
+        return "a";
+    }
+
     public void SetName(string name){
         _name = name;
     }

@@ -14,6 +14,10 @@ public class Diagnostic : IDataSL{
         _date = DateOnly.FromDateTime(DateTime.Now);
     }
 
+    public override string ToString(){
+        return "a";
+    }
+
     public void SetReports(List<string> reports){
         _reports = reports;
     }

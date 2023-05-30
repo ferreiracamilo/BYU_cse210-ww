@@ -7,6 +7,10 @@ public class VisitDiscomfort : Visit, IDataSL{
         _patient = pet;
     }
 
+    public override string ToString(){
+        return "a";
+    }
+
     public void SetSynthoms(List<string> synthoms){
         _synthoms = synthoms;
     }

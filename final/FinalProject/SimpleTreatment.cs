@@ -9,6 +9,10 @@ public class SimpleTreatment : Treatment, IDataSL{
         _vet = vet;
     }
 
+    public override string ToString(){
+        return "a";
+    }
+
     public void SetDrugs(List<Drug> drugs){
         _drugs = drugs;
     }

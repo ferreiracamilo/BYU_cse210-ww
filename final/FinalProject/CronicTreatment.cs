@@ -13,6 +13,10 @@ public class CronicTreatment : Treatment, IDataSL{
         _vet = vet;
     }
 
+    public override string ToString(){
+        return "a";
+    }
+
     public void AddDrug(Drug drug){
         _drugs.Add(drug);
     }

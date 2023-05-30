@@ -6,6 +6,10 @@ public class VisitControl : Visit, IDataSL{
         _id = id;
         _patient = pet;
     }
+
+    public override string ToString(){
+        return "a";
+    }
     
     public void SetValuations(List<string> valuations){
         _valuations = valuations;

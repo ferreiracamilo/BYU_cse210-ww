@@ -48,6 +48,10 @@ public class Owner : IDataSL{
         _petList = petList;
     }
 
+    public override string ToString(){
+        return "a";
+    }
+
     public void SetPetList(List<Pet> petList){
         _petList = petList;
     }
