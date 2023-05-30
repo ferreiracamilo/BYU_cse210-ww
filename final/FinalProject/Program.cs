@@ -19,50 +19,114 @@ class Program{
             if(_option != 12){
                 switch(_option){
                     case 1:
+                        //New Pet
                         Pet pet1 = RegisterNewPet();
                         _pets.Add(pet1);
                         break;
                     case 2:
-                        //new owner
-                        //RegisterNewOwner
-                        break;
+                        //New Owner
+                        if(_pets.Count() == 0){
+                            Console.WriteLine("Load pets before performing this operation");
+                            Thread.Sleep(1000);
+                            break;
+                        }else{
+                            Owner owner1 = RegisterNewOwner();
+                            Pet owner1_pet = PickPet(_pets);
+                            owner1.AddPet(owner1_pet);
+                            _owners.Add(owner1);
+                            break;
+                        }
                     case 3:
-                        //new vet
-                        //RegisterNewVet
+                        //New Vet
+                        Vet vet1 = RegisterNewVet();
                         break;
                     case 4:
-                        //new surgery
-                        //RegisterNewSurgery
-                        break;
+                        //New Surgery
+                        if(_pets.Count() == 0 || _vets.Count() == 0){
+                            Console.WriteLine("Load pets and vets before performing this operation");
+                            Thread.Sleep(1000);
+                            break;
+                        }else{
+                            Pet surgeryPet = PickPet(_pets);
+                            Vet surgeryVet = PickVet(_vets);
+                            Surgery surgery1 = RegisterNewSurgery(surgeryPet, surgeryVet);
+                            _treatments.Add(surgery1);
+                            break;
+                        }
                     case 5:
                         //new cronic treatment
-                        //RegisterNewCronicTreatment
-                        break;
+                        if(_pets.Count() == 0 || _vets.Count() == 0 || _drugs.Count() == 0){
+                            Console.WriteLine("Load pets, vets and drugs before performing this operation");
+                            Thread.Sleep(1000);
+                            break;
+                        }else{
+                            Pet cronicTreatmentPet = PickPet(_pets);
+                            Vet cronicTreatmentVet = PickVet(_vets);
+                            CronicTreatment surgery1 = RegisterNewCronicTreatment(cronicTreatmentPet, cronicTreatmentVet, _drugs);
+                            _treatments.Add(surgery1);
+                            break;
+                        }
                     case 6:
                         //new simple treatment
-                        //RegisterNewSimpleTreatment
-                        break;
+                        if(_pets.Count() == 0 || _vets.Count() == 0 || _drugs.Count() == 0){
+                            Console.WriteLine("Load pets, vets and drugs before performing this operation");
+                            Thread.Sleep(1000);
+                            break;
+                        }else{
+                            Pet simpleTreatmentPet = PickPet(_pets);
+                            Vet simpleTreatmentVet = PickVet(_vets);
+                            SimpleTreatment simpleTreatment1 = RegisterNewSimpleTreatment(simpleTreatmentPet, simpleTreatmentVet, _drugs);
+                            _treatments.Add(simpleTreatment1);
+                            break;
+                        }
                     case 7:
                         //new drug
-                        //RegisterNewDrug
+                        Drug drug1 = RegisterNewDrug();
+                        _drugs.Add(drug1);
                         break;
                     case 8:
                         //new diagnostic
-                        //RegisterNewDiagnostic
-                        break;
+                        if(_pets.Count() == 0 || _vets.Count() == 0){
+                            Console.WriteLine("Load pets and vets before performing this operation");
+                            Thread.Sleep(1000);
+                            break;
+                        }else{
+                            Pet diagnostic1Pet = PickPet(_pets);
+                            Vet diagnostic1Vet = PickVet(_vets);
+                            Diagnostic diagnostic1 = RegisterNewDiagnostic(diagnostic1Pet,diagnostic1Vet);
+                            _diagnostics.Add(diagnostic1);
+                            break;
+                        }
                     case 9:
                         //new visit discomfort
-                        //RegisterNewVisitDiscomfort
-                        break;
+                        if(_pets.Count() == 0){
+                            Console.WriteLine("Load pets before performing this operation");
+                            Thread.Sleep(1000);
+                            break;
+                        }else{
+                            Pet visitDiscomfort1Pet = PickPet(_pets);
+                            VisitDiscomfort visitDiscomfor1 = RegisterNewVisitDiscomfort(visitDiscomfort1Pet);
+                            _visits.Add(visitDiscomfor1);
+                            break;
+                        }
                     case 10:
                         //new visit control
-                        //RegisterNewVisitControl
+                        if(_pets.Count() == 0){
+                            Console.WriteLine("Load pets before performing this operation");
+                            Thread.Sleep(1000);
+                            break;
+                        }else{
+                            Pet visitControl1Pet = PickPet(_pets);
+                            VisitControl visitControl1 = RegisterNewVisitControl(visitControl1Pet);
+                            _visits.Add(visitControl1);
+                            break;
+                        }
                     case 11:
                         //list all information
-                        //_visits
                         int overallLength = _pets.Count() + _owners.Count() + _vets.Count() + _diagnostics.Count() + _treatments.Count() + _drugs.Count() + _visits.Count();
                         if(overallLength <= 0){
                             Console.WriteLine("There's no record to list/display");
+                            Thread.Sleep(1000);
                             break;
                         }
                         
@@ -71,7 +135,7 @@ class Program{
                             foreach(Pet pet in _pets){
                                 Console.WriteLine(pet);
                             }
-                            Thread.Sleep(500);
+                            Thread.Sleep(5000);
                         }
 
                         if(_owners.Count() > 0){
@@ -79,7 +143,7 @@ class Program{
                             foreach(Owner owner in _owners){
                                 Console.WriteLine(owner);
                             }
-                            Thread.Sleep(500);
+                            Thread.Sleep(5000);
                         }
 
                         if(_vets.Count() > 0){
@@ -87,7 +151,7 @@ class Program{
                             foreach(Vet vet in _vets){
                                 Console.WriteLine(vet);
                             }
-                            Thread.Sleep(500);
+                            Thread.Sleep(5000);
                         }
 
                         if(_diagnostics.Count() > 0){
@@ -95,7 +159,7 @@ class Program{
                             foreach(Diagnostic diagnostic in _diagnostics){
                                 Console.WriteLine(diagnostic);
                             }
-                            Thread.Sleep(500);
+                            Thread.Sleep(5000);
                         }
 
                         if(_treatments.Count() > 0){
@@ -103,7 +167,7 @@ class Program{
                             foreach(Treatment treatment in _treatments){
                                 Console.WriteLine(treatment);
                             }
-                            Thread.Sleep(500);
+                            Thread.Sleep(5000);
                         }
 
                         if(_drugs.Count() > 0){
@@ -111,7 +175,7 @@ class Program{
                             foreach(Drug drug in _drugs){
                                 Console.WriteLine(drug);
                             }
-                            Thread.Sleep(500);
+                            Thread.Sleep(5000);
                         }
 
                         if(_visits.Count() > 0){
@@ -119,12 +183,12 @@ class Program{
                             foreach(Visit visit in _visits){
                                 Console.WriteLine(visit);
                             }
-                            Thread.Sleep(500);
+                            Thread.Sleep(5000);
                         }
                         break;
                 }
             }
-            Console.Clear();
+            // Console.Clear();
         }while(_option != 12);
 
 
@@ -150,7 +214,7 @@ class Program{
         return option;
     }
 
-    private Pet PickPet(List<Pet> pets){
+    private static Pet PickPet(List<Pet> pets){
         for(int i=0; i < pets.Count(); i++){
             Pet pet = pets[i];
             Console.WriteLine($"{i+1}. {pet.GetName()} - {pet.GetAnimalType()} - {pet.GetBirthDate()}");
@@ -162,7 +226,7 @@ class Program{
         return pets[index];
     }
 
-    private Vet PickVet(List<Vet> vets){
+    private static Vet PickVet(List<Vet> vets){
         for(int i=0; i < vets.Count(); i++){
             Vet vet = vets[i];
             Console.WriteLine($"{i+1}. {vet.GetDocid()} - {vet.GetEmail()}");
@@ -174,7 +238,7 @@ class Program{
         return vets[index];
     }
 
-    private Drug PickDrug(List<Drug> drugs){
+    private static Drug PickDrug(List<Drug> drugs){
         for(int i=0; i < drugs.Count(); i++){
             Drug drug = drugs[i];
             Console.WriteLine($"{i+1}. {drug.GetName()} - {drug.GetPresentation()}");
