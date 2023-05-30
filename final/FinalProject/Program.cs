@@ -58,7 +58,7 @@ class Program{
             Console.WriteLine($"{i+1}. {pet.GetName()} - {pet.GetAnimalType()} - {pet.GetBirthDate()}");
         }
 
-        Console.Write("\nPick the pet based on the previous list");
+        Console.Write("\nPick the pet based on the previous list: ");
         int index = int.Parse(Console.ReadLine()) - 1;
 
         return pets[index];
@@ -70,7 +70,7 @@ class Program{
             Console.WriteLine($"{i+1}. {vet.GetDocid()} - {vet.GetEmail()}");
         }
 
-        Console.Write("\nPick the pet based on the previous list");
+        Console.Write("\nPick the vet based on the previous list: ");
         int index = int.Parse(Console.ReadLine()) - 1;
 
         return vets[index];
@@ -82,7 +82,7 @@ class Program{
             Console.WriteLine($"{i+1}. {drug.GetName()} - {drug.GetPresentation()}");
         }
 
-        Console.Write("\nPick the pet based on the previous list");
+        Console.Write("\nPick the drug based on the previous list: ");
         int index = int.Parse(Console.ReadLine()) - 1;
 
         return drugs[index];
@@ -153,7 +153,6 @@ class Program{
     private static Diagnostic RegisterNewDiagnostic(Pet pet, Vet vet){
         Console.WriteLine("\n**** DIAGNOSTIC REGISTRATION ****");
 
-        // Pet patient, int severity, Vet vet, int id
         Console.Write("\nProvide severity of diagnostic (from 1 to 10): ");
         int severity = int.Parse(Console.ReadLine());
 
@@ -165,14 +164,41 @@ class Program{
     private static Surgery RegisterNewSurgery(Pet pet, Vet vet){
         Console.WriteLine("\n**** SURGERY REGISTRATION ****");
 
-        //Surgery(Pet patient, int id, string anestesia){
-
         Console.Write("\nProvide anestesia for the surgery: ");
         string anestesia = Console.ReadLine();
 
-        Surgery surgery = new Surgery(Pet patient, int id, string anestesia)
+        Surgery surgery = new Surgery(pet, Utils.CreateUniqueId(), anestesia, vet);
 
-        
+        Console.Write("\nAdd procedure: ");
+        string procedure1 = Console.ReadLine();
+        surgery.AddProcedure(procedure1);
+
+        return surgery;
+    }
+
+    private static SimpleTreatment RegisterSimpleTreatment(Pet pet, Vet vet, List<Drug> drugs){
+        Console.WriteLine("\n**** SIMPLE TREATMENT REGISTRATION ****");
+
+        SimpleTreatment simpleTreatment = new SimpleTreatment(pet, Utils.CreateUniqueId(), vet);
+
+        int randomIndex = new Random().Next(0, drugs.Count);
+        simpleTreatment.AddDrug(drugs[randomIndex]);
+
+        return simpleTreatment;
+    }
+
+    private static CronicTreatment RegisterCronicTreatment(Pet pet, Vet vet, List<Drug> drugs){
+        Console.WriteLine("\n**** CRONIC TREATMENT REGISTRATION ****");
+
+        Console.Write("\nProvide weeks of prescription for treatment: ");
+        int durationWeeks = int.Parse(Console.ReadLine());
+
+        CronicTreatment cronicTreatment = new CronicTreatment(pet, Utils.CreateUniqueId(), durationWeeks, vet);
+
+        int randomIndex = new Random().Next(0, drugs.Count);
+        cronicTreatment.AddDrug(drugs[randomIndex]);
+
+        return cronicTreatment;
     }
 
 
