@@ -1,4 +1,4 @@
-public class Visit{
+public abstract class Visit{
     protected Pet _patient;
     protected DateOnly _date;
     protected int _id;
