@@ -4,6 +4,8 @@ class Program{
 
     static void Main(string[] args)
     {
+        int check = Utils.CreateUniqueId();
+        string s = " s ";
         List<Pet> _pets = new List<Pet>();
         List<Owner> _owners = new List<Owner>();
         List<Vet> _vets = new List<Vet>();
@@ -117,6 +119,7 @@ class Program{
                         break;
                 }
             }
+            Console.Clear();
         }while(_option != 12);
 
 
@@ -222,7 +225,7 @@ class Program{
     }
 
     private static Vet RegisterNewVet(){
-        Console.WriteLine("\n**** OWNER REGISTRATION ****");
+        Console.WriteLine("\n**** VET REGISTRATION ****");
         
         Console.Write("\nProvide your document id: ");
         int docId = int.Parse(Console.ReadLine());

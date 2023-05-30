@@ -81,7 +81,8 @@ public static class Utils{
     int minutes = now.Minute;
     int seconds = now.Second;
 
-    int id = int.Parse($"{month:00}{day:00}{year}{hour:00}{minutes:00}{seconds:00}");
+    // int id = int.Parse($"{month:00}{day:00}{year}{hour:00}{minutes:00}{seconds:00}");
+    int id = int.Parse($"{month:00}{day:00}{hour:00}{minutes:00}{seconds:00}");
 
     return id;
     }
