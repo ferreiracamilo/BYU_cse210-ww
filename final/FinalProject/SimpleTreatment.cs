@@ -10,7 +10,14 @@ public class SimpleTreatment : Treatment, IDataSL{
     }
 
     public override string ToString(){
-        return "a";
+        string status = "Incomplete";
+        if(_isCompleted){
+            status = "Complete";
+        }
+
+        string drugs = SimpleTreatment.DrugListToString(_drugs);
+
+        return $"<<Treatment: Cronic Treatment>> ID: {_id} - Status: {status} - Start Date: {_startDate} \nDrugs: {drugs} \n{_vet} \n{_patient}";
     }
 
     public void SetDrugs(List<Drug> drugs){

@@ -14,7 +14,14 @@ public class CronicTreatment : Treatment, IDataSL{
     }
 
     public override string ToString(){
-        return "a";
+        string status = "Incomplete";
+        if(_isCompleted){
+            status = "Complete";
+        }
+
+        string drugs = CronicTreatment.DrugListToString(_drugs);
+
+        return $"<<Treatment: Cronic Treatment>> ID: {_id} - Status: {status} - Start Date: {_startDate} - Weeks Prescripted: {_qtyWeeksPrescripted} - Weeks Completed: {_qtyWeeksCompleted} \nDrugs: {drugs} \n{_vet} \n{_patient}";
     }
 
     public void AddDrug(Drug drug){
