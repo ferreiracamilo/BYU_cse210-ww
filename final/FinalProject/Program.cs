@@ -2,8 +2,6 @@ using System;
 
 class Program{
 
-    
-
     static void Main(string[] args)
     {
         List<Pet> _pets = new List<Pet>();
@@ -18,15 +16,44 @@ class Program{
 
         do{
             _option = PrintMainMenu();
-            if(_option != 13){
+            if(_option != 12){
                 switch(_option){
                     case 1:
                         Pet pet1 = RegisterNewPet();
                         _pets.Add(pet1);
                         break;
+                    case 2:
+                        //new owner
+                        break;
+                    case 3:
+                        //new vet
+                        break;
+                    case 4:
+                        //new surgery
+                        break;
+                    case 5:
+                        //new cronic treatment
+                        break;
+                    case 6:
+                        //new simple treatment
+                        break;
+                    case 7:
+                        //new drug
+                        break;
+                    case 8:
+                        //new diagnostic
+                        break;
+                    case 9:
+                        //new visit discomfort
+                        break;
+                    case 10:
+                        //new visit control
+                    case 11:
+                        //list all information
+                        break;
                 }
             }
-        }while(_option != 13);
+        }while(_option != 12);
 
 
     }
@@ -39,13 +66,13 @@ class Program{
         Console.WriteLine("    3. Register new vet");
         Console.WriteLine("    4. Register new surgery");
         Console.WriteLine("    5. Register new cronic treatment");
-        Console.WriteLine("    7. Register new simple treatment");
-        Console.WriteLine("    8. Register new drug");
-        Console.WriteLine("    9. Register new diagnostic");
-        Console.WriteLine("    10. Register new visit due to discomfort");
-        Console.WriteLine("    11. Register new visit due to control");
-        Console.WriteLine("    12. List all information");
-        Console.WriteLine("    13. Quit");
+        Console.WriteLine("    6. Register new simple treatment");
+        Console.WriteLine("    7. Register new drug");
+        Console.WriteLine("    8. Register new diagnostic");
+        Console.WriteLine("    9. Register new visit due to discomfort");
+        Console.WriteLine("    10. Register new visit due to control");
+        Console.WriteLine("    11. List all information");
+        Console.WriteLine("    12. Quit");
         Console.Write("Select a choice from the menu: ");
         option = int.Parse(Console.ReadLine());
         return option;
