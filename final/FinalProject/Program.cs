@@ -10,7 +10,7 @@ class Program{
         List<Diagnostic> _diagnostics = new List<Diagnostic>();
         List<Treatment> _treatments = new List<Treatment>();
         List<Drug> _drugs = new List<Drug>();
-        List<Visit> _vistis = new List<Visit>();
+        List<Visit> _visits = new List<Visit>();
 
         int _option = 0;
 
@@ -50,6 +50,18 @@ class Program{
                         //new visit control
                     case 11:
                         //list all information
+                        //_pets
+                        //_owners
+                        //_vets
+                        //_diagnostics
+                        //_treatments
+                        //_drugs
+                        //_visits
+                        int overallLength = _pets.Count() + _owners.Count() + _vets.Count() + _diagnostics.Count() + _treatments.Count() + _drugs.Count() + _visits.Count();
+                        if(overallLength <= 0){
+                            Console.WriteLine("There's no record to list/display");
+                            break;
+                        }
                         break;
                 }
             }
