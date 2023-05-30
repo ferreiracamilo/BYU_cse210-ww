@@ -163,10 +163,14 @@ class Program{
     }
 
     private static Surgery RegisterNewSurgery(Pet pet, Vet vet){
-        Console.WriteLine("\n**** DIAGNOSTIC REGISTRATION ****");
+        Console.WriteLine("\n**** SURGERY REGISTRATION ****");
 
-        Console.Write("\nProvide severity of diagnostic (from 1 to 10): ");
-        int severity = int.Parse(Console.ReadLine());
+        //Surgery(Pet patient, int id, string anestesia){
+
+        Console.Write("\nProvide anestesia for the surgery: ");
+        string anestesia = Console.ReadLine();
+
+        Surgery surgery = new Surgery(Pet patient, int id, string anestesia)
 
         
     }

@@ -32,6 +32,6 @@ public class Surgery : Treatment, IDataSL{
 
     public string StringRepresentation(){
         string procedures = Utils.ListToString(_procedures);
-        return $"{_startDate};{_patient};{_id};{_isCompleted};{procedures};{_anestesiaType}";
+        return $"{_startDate};{_patient.GetId()};{_id};{_isCompleted};{procedures};{_anestesiaType}";
     }
 }
