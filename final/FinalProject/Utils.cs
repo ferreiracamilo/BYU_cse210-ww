@@ -66,4 +66,23 @@ public static class Utils{
         
         return true;
     }
+
+    /// <summary>
+    /// Generate an int Id based on current datetime to assure will be unique
+    /// </summary>
+    /// <returns>int</returns>
+    public static int CreateUniqueId(){
+    DateTime now = DateTime.Now;
+
+    int month = now.Month;
+    int day = now.Day;
+    int year = now.Year;
+    int hour = now.Hour;
+    int minutes = now.Minute;
+    int seconds = now.Second;
+
+    int id = int.Parse($"{month:00}{day:00}{year}{hour:00}{minutes:00}{seconds:00}");
+
+    return id;
+    }
 }
