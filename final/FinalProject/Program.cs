@@ -24,30 +24,39 @@ class Program{
                         break;
                     case 2:
                         //new owner
+                        //RegisterNewOwner
                         break;
                     case 3:
                         //new vet
+                        //RegisterNewVet
                         break;
                     case 4:
                         //new surgery
+                        //RegisterNewSurgery
                         break;
                     case 5:
                         //new cronic treatment
+                        //RegisterNewCronicTreatment
                         break;
                     case 6:
                         //new simple treatment
+                        //RegisterNewSimpleTreatment
                         break;
                     case 7:
                         //new drug
+                        //RegisterNewDrug
                         break;
                     case 8:
                         //new diagnostic
+                        //RegisterNewDiagnostic
                         break;
                     case 9:
                         //new visit discomfort
+                        //RegisterNewVisitDiscomfort
                         break;
                     case 10:
                         //new visit control
+                        //RegisterNewVisitControl
                     case 11:
                         //list all information
                         //_visits
@@ -257,7 +266,7 @@ class Program{
         return surgery;
     }
 
-    private static SimpleTreatment RegisterSimpleTreatment(Pet pet, Vet vet, List<Drug> drugs){
+    private static SimpleTreatment RegisterNewSimpleTreatment(Pet pet, Vet vet, List<Drug> drugs){
         Console.WriteLine("\n**** SIMPLE TREATMENT REGISTRATION ****");
 
         SimpleTreatment simpleTreatment = new SimpleTreatment(pet, Utils.CreateUniqueId(), vet);
@@ -268,7 +277,7 @@ class Program{
         return simpleTreatment;
     }
 
-    private static CronicTreatment RegisterCronicTreatment(Pet pet, Vet vet, List<Drug> drugs){
+    private static CronicTreatment RegisterNewCronicTreatment(Pet pet, Vet vet, List<Drug> drugs){
         Console.WriteLine("\n**** CRONIC TREATMENT REGISTRATION ****");
 
         Console.Write("\nProvide weeks of prescription for treatment: ");
@@ -282,7 +291,7 @@ class Program{
         return cronicTreatment;
     }
 
-    private static VisitDiscomfort RegisterVisitDiscomfort(Pet pet){
+    private static VisitDiscomfort RegisterNewVisitDiscomfort(Pet pet){
         Console.WriteLine("\n**** VISIT DISCOMFORT REGISTRATION ****");
 
         Console.Write("\nProvide a synthom related to the visit: ");
@@ -295,7 +304,7 @@ class Program{
         return visitDiscomfort;
     }
 
-    private static VisitControl RegisterVisitControl(Pet pet){
+    private static VisitControl RegisterNewVisitControl(Pet pet){
         Console.WriteLine("\n**** VISIT CONTROL REGISTRATION ****");
 
         Console.Write("\nProvide a valuation related to the visit: ");
@@ -306,6 +315,23 @@ class Program{
         visitControl.AddValuation(valuation);
 
         return visitControl;
+    }
+
+    private static Drug RegisterNewDrug(){
+        Console.WriteLine("\n**** DRUG REGISTRATION ****");
+
+        Console.Write("\nProvide drug's name: ");
+        string name = Console.ReadLine();
+
+        Console.Write("\nProvide drug's type: ");
+        string type = Console.ReadLine();
+
+        Console.Write("\nProvide drug's presentation: ");
+        string presentation = Console.ReadLine();
+
+        Drug drug = new Drug(name, type, presentation, Utils.CreateUniqueId());
+
+        return drug;
     }
 
 

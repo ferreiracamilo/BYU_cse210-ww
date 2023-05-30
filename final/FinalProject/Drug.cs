@@ -4,6 +4,13 @@ public class Drug : IDataSL{
     private string _presentation;
     private int _id;
 
+    public Drug(string name, string type, string presentation, int id){
+        _name = name;
+        _type = type;
+        _presentation = presentation;
+        _id = id;
+    }
+
     public override string ToString(){
         return "a";
     }
