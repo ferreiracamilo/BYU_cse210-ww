@@ -15,7 +15,6 @@ class Program{
         List<Visit> _vistis = new List<Visit>();
 
         int _option = 0;
-        string fileName;
 
         do{
             _option = PrintMainMenu();
