@@ -71,6 +71,7 @@ class Program{
                             foreach(Pet pet in _pets){
                                 Console.WriteLine(pet);
                             }
+                            Thread.Sleep(500);
                         }
 
                         if(_owners.Count() > 0){
@@ -78,6 +79,7 @@ class Program{
                             foreach(Owner owner in _owners){
                                 Console.WriteLine(owner);
                             }
+                            Thread.Sleep(500);
                         }
 
                         if(_vets.Count() > 0){
@@ -85,6 +87,7 @@ class Program{
                             foreach(Vet vet in _vets){
                                 Console.WriteLine(vet);
                             }
+                            Thread.Sleep(500);
                         }
 
                         if(_diagnostics.Count() > 0){
@@ -92,6 +95,7 @@ class Program{
                             foreach(Diagnostic diagnostic in _diagnostics){
                                 Console.WriteLine(diagnostic);
                             }
+                            Thread.Sleep(500);
                         }
 
                         if(_treatments.Count() > 0){
@@ -99,6 +103,7 @@ class Program{
                             foreach(Treatment treatment in _treatments){
                                 Console.WriteLine(treatment);
                             }
+                            Thread.Sleep(500);
                         }
 
                         if(_drugs.Count() > 0){
@@ -106,6 +111,7 @@ class Program{
                             foreach(Drug drug in _drugs){
                                 Console.WriteLine(drug);
                             }
+                            Thread.Sleep(500);
                         }
 
                         if(_visits.Count() > 0){
@@ -113,6 +119,7 @@ class Program{
                             foreach(Visit visit in _visits){
                                 Console.WriteLine(visit);
                             }
+                            Thread.Sleep(500);
                         }
                         break;
                 }
