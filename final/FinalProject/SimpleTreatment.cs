@@ -1,6 +1,13 @@
 public class SimpleTreatment : Treatment, IDataSL{
     private List<Drug> _drugs = new List<Drug>();
 
+    public SimpleTreatment(Pet patient, int id){
+        _startDate = DateOnly.FromDateTime(DateTime.Now);
+        _patient = patient;
+        _id = id;
+        _isCompleted = true;
+    }
+
     public void SetDrugs(List<Drug> drugs){
         _drugs = drugs;
     }

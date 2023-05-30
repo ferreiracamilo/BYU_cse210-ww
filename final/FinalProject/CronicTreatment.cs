@@ -3,6 +3,15 @@ public class CronicTreatment : Treatment, IDataSL{
     private int _qtyWeeksCompleted;
     private List<Drug> _drugs = new List<Drug>();
 
+    public CronicTreatment(Pet patient, int id, int qtyWeeksPrescripted){
+        _startDate = DateOnly.FromDateTime(DateTime.Now);
+        _patient = patient;
+        _id = id;
+        _qtyWeeksPrescripted = qtyWeeksPrescripted;
+        _qtyWeeksCompleted = 0;
+        _isCompleted = false;
+    }
+
     public void AddDrug(Drug drug){
         _drugs.Add(drug);
     }

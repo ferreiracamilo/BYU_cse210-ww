@@ -131,7 +131,7 @@ class Program{
         return owner1;
     }
 
-    private static Vet RegisterPet(){
+    private static Vet RegisterNewVet(){
         Console.WriteLine("\n**** OWNER REGISTRATION ****");
         
         Console.Write("\nProvide your document id: ");
@@ -146,12 +146,34 @@ class Program{
         Console.Write("Provide your address: ");
         string email = Console.ReadLine();
         
-        Console.Write("Provide your payment method (cash, debit, card, check): ");
-        string monthlyFeePaymentMethod = Console.ReadLine();
-
-        Owner owner1 = new Owner(docId, phoneNumber, address, email, monthlyFeePaymentMethod);
-        return owner1;
+        Vet vet1 = new Vet(docId, phoneNumber, address, email);
+        return vet1;
     }
+
+    private static Diagnostic RegisterNewDiagnostic(Pet pet, Vet vet){
+        Console.WriteLine("\n**** DIAGNOSTIC REGISTRATION ****");
+
+        // Pet patient, int severity, Vet vet, int id
+        Console.Write("\nProvide severity of diagnostic (from 1 to 10): ");
+        int severity = int.Parse(Console.ReadLine());
+
+        Diagnostic diagnostic = new Diagnostic(pet, severity, vet, Utils.CreateUniqueId());
+
+        return diagnostic;
+    }
+
+    private static Surgery RegisterNewSurgery(Pet pet, Vet vet){
+        Console.WriteLine("\n**** DIAGNOSTIC REGISTRATION ****");
+
+        Console.Write("\nProvide severity of diagnostic (from 1 to 10): ");
+        int severity = int.Parse(Console.ReadLine());
+
+        
+    }
+
+
+
+
 
 
 }

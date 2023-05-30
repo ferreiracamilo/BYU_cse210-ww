@@ -2,6 +2,14 @@ public class Surgery : Treatment, IDataSL{
     private List<string> _procedures = new List<string>();
     private string _anestesiaType;
 
+    public Surgery(Pet patient, int id, string anestesia){
+        _startDate = DateOnly.FromDateTime(DateTime.Now);
+        _patient = patient;
+        _id = id;
+        _isCompleted = true;
+        _anestesiaType = anestesia;
+    }
+
     public void SetProcedures(List<string> procedures){
         _procedures = procedures;
     }

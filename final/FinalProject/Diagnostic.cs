@@ -6,6 +6,14 @@ public class Diagnostic : IDataSL{
     private Vet _vet;
     private int _id;
 
+    public Diagnostic(Pet patient, int severity, Vet vet, int id){
+        _patient = patient;
+        _severity = severity;
+        _vet = vet;
+        _id = id;
+        _date = DateOnly.FromDateTime(DateTime.Now);
+    }
+
     public void SetReports(List<string> reports){
         _reports = reports;
     }
