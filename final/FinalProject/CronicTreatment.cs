@@ -3,13 +3,14 @@ public class CronicTreatment : Treatment, IDataSL{
     private int _qtyWeeksCompleted;
     private List<Drug> _drugs = new List<Drug>();
 
-    public CronicTreatment(Pet patient, int id, int qtyWeeksPrescripted){
+    public CronicTreatment(Pet patient, int id, int qtyWeeksPrescripted, Vet vet){
         _startDate = DateOnly.FromDateTime(DateTime.Now);
         _patient = patient;
         _id = id;
         _qtyWeeksPrescripted = qtyWeeksPrescripted;
         _qtyWeeksCompleted = 0;
         _isCompleted = false;
+        _vet = vet;
     }
 
     public void AddDrug(Drug drug){
@@ -64,6 +65,6 @@ public class CronicTreatment : Treatment, IDataSL{
 
     public string StringRepresentation(){
         string drugs = CronicTreatment.DrugListToString(_drugs);
-        return $"{_startDate};{_patient.GetId()};{_id};{_isCompleted};{_qtyWeeksPrescripted};{_qtyWeeksCompleted};{drugs}";
+        return $"{_startDate};{_patient.GetId()};{_vet.GetDocid()};{_id};{_isCompleted};{_qtyWeeksPrescripted};{_qtyWeeksCompleted};{drugs}";
     }
 }

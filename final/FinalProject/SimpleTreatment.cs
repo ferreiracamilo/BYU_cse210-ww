@@ -1,11 +1,12 @@
 public class SimpleTreatment : Treatment, IDataSL{
     private List<Drug> _drugs = new List<Drug>();
 
-    public SimpleTreatment(Pet patient, int id){
+    public SimpleTreatment(Pet patient, int id, Vet vet){
         _startDate = DateOnly.FromDateTime(DateTime.Now);
         _patient = patient;
         _id = id;
         _isCompleted = true;
+        _vet = vet;
     }
 
     public void SetDrugs(List<Drug> drugs){
@@ -44,6 +45,6 @@ public class SimpleTreatment : Treatment, IDataSL{
 
     public string StringRepresentation(){
         string drugs = SimpleTreatment.DrugListToString(_drugs);
-        return $"{_startDate};{_patient.GetId()};{_id};{_isCompleted};{drugs}";
+        return $"{_startDate};{_patient.GetId()};{_vet.GetDocid()};{_id};{_isCompleted};{drugs}";
     }
 }

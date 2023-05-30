@@ -3,6 +3,15 @@ public abstract class Treatment{
     protected Pet _patient;
     protected int _id;
     protected bool _isCompleted;
+    protected Vet _vet;
+
+    public virtual void SetVet(Vet vet){
+        _vet = vet;       
+    }
+
+    public virtual Vet GetVet(){
+        return _vet;
+    }
 
     public virtual void SetStartDate(DateOnly date){
         _startDate = date;
