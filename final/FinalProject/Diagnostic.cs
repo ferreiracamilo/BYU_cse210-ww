@@ -15,7 +15,7 @@ public class Diagnostic : IDataSL{
     }
 
     public override string ToString(){
-        return "a";
+        return $"<<Diagnostic>> ID: {_id} - Severity: {_severity} - Date: {_date} \n{_patient} \n{_vet}";
     }
 
     public void SetReports(List<string> reports){

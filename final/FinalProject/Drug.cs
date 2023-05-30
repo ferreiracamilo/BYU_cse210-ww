@@ -12,7 +12,7 @@ public class Drug : IDataSL{
     }
 
     public override string ToString(){
-        return "a";
+        return $"<<Drug>> ID: {_id} - Name: {_name} - Type: {_type} - Presentation: {_presentation}";
     }
 
     public void SetName(string name){
