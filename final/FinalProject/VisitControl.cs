@@ -8,7 +8,8 @@ public class VisitControl : Visit, IDataSL{
     }
 
     public override string ToString(){
-        return "a";
+        string valuations = Utils.ListToString(_valuations);
+        return $"<<Visit Control>> ID: {_id} - Date: {_date} - Valuations: {_valuations} \n{_patient}";
     }
     
     public void SetValuations(List<string> valuations){
