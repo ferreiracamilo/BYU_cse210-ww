@@ -9,7 +9,7 @@ public class VisitDiscomfort : Visit, IDataSL{
 
     public override string ToString(){
         string synthoms = Utils.ListToString(_synthoms);
-        return $"<<Visit Discomfort>> ID: {_id} - Date: {_date} - Valuations: {synthoms} \n{_patient}";
+        return $"<<Visit: Discomfort>> ID: {_id} - Date: {_date} - Valuations: {synthoms} \n{_patient}";
     }
 
     public void SetSynthoms(List<string> synthoms){
