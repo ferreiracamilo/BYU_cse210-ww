@@ -4,8 +4,6 @@ class Program{
 
     static void Main(string[] args)
     {
-        int check = Utils.CreateUniqueId();
-        string s = " s ";
         List<Pet> _pets = new List<Pet>();
         List<Owner> _owners = new List<Owner>();
         List<Vet> _vets = new List<Vet>();
@@ -69,49 +67,49 @@ class Program{
                         }
                         
                         if(_pets.Count() > 0){
-                            Console.WriteLine("*** PETS LOGGED ***");
+                            Console.WriteLine("\n*** PETS LOGGED ***");
                             foreach(Pet pet in _pets){
                                 Console.WriteLine(pet);
                             }
                         }
 
                         if(_owners.Count() > 0){
-                            Console.WriteLine("*** OWNERS LOGGED ***");
+                            Console.WriteLine("\n*** OWNERS LOGGED ***");
                             foreach(Owner owner in _owners){
                                 Console.WriteLine(owner);
                             }
                         }
 
                         if(_vets.Count() > 0){
-                            Console.WriteLine("*** VETS LOGGED ***");
+                            Console.WriteLine("\n*** VETS LOGGED ***");
                             foreach(Vet vet in _vets){
                                 Console.WriteLine(vet);
                             }
                         }
 
                         if(_diagnostics.Count() > 0){
-                            Console.WriteLine("*** DIAGNOSTICS LOGGED ***");
+                            Console.WriteLine("\n*** DIAGNOSTICS LOGGED ***");
                             foreach(Diagnostic diagnostic in _diagnostics){
                                 Console.WriteLine(diagnostic);
                             }
                         }
 
                         if(_treatments.Count() > 0){
-                            Console.WriteLine("*** TREATMENTS LOGGED ***");
+                            Console.WriteLine("\n*** TREATMENTS LOGGED ***");
                             foreach(Treatment treatment in _treatments){
                                 Console.WriteLine(treatment);
                             }
                         }
 
                         if(_drugs.Count() > 0){
-                            Console.WriteLine("*** DRUGS LOGGED ***");
+                            Console.WriteLine("\n*** DRUGS LOGGED ***");
                             foreach(Drug drug in _drugs){
                                 Console.WriteLine(drug);
                             }
                         }
 
                         if(_visits.Count() > 0){
-                            Console.WriteLine("*** VISITS LOGGED ***");
+                            Console.WriteLine("\n*** VISITS LOGGED ***");
                             foreach(Visit visit in _visits){
                                 Console.WriteLine(visit);
                             }
