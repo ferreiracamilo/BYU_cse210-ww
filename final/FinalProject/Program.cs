@@ -50,17 +50,60 @@ class Program{
                         //new visit control
                     case 11:
                         //list all information
-                        //_pets
-                        //_owners
-                        //_vets
-                        //_diagnostics
-                        //_treatments
-                        //_drugs
                         //_visits
                         int overallLength = _pets.Count() + _owners.Count() + _vets.Count() + _diagnostics.Count() + _treatments.Count() + _drugs.Count() + _visits.Count();
                         if(overallLength <= 0){
                             Console.WriteLine("There's no record to list/display");
                             break;
+                        }
+                        
+                        if(_pets.Count() > 0){
+                            Console.WriteLine("*** PETS LOGGED ***");
+                            foreach(Pet pet in _pets){
+                                Console.WriteLine(pet);
+                            }
+                        }
+
+                        if(_owners.Count() > 0){
+                            Console.WriteLine("*** OWNERS LOGGED ***");
+                            foreach(Owner owner in _owners){
+                                Console.WriteLine(owner);
+                            }
+                        }
+
+                        if(_vets.Count() > 0){
+                            Console.WriteLine("*** VETS LOGGED ***");
+                            foreach(Vet vet in _vets){
+                                Console.WriteLine(vet);
+                            }
+                        }
+
+                        if(_diagnostics.Count() > 0){
+                            Console.WriteLine("*** DIAGNOSTICS LOGGED ***");
+                            foreach(Diagnostic diagnostic in _diagnostics){
+                                Console.WriteLine(diagnostic);
+                            }
+                        }
+
+                        if(_treatments.Count() > 0){
+                            Console.WriteLine("*** TREATMENTS LOGGED ***");
+                            foreach(Treatment treatment in _treatments){
+                                Console.WriteLine(treatment);
+                            }
+                        }
+
+                        if(_drugs.Count() > 0){
+                            Console.WriteLine("*** DRUGS LOGGED ***");
+                            foreach(Drug drug in _drugs){
+                                Console.WriteLine(drug);
+                            }
+                        }
+
+                        if(_visits.Count() > 0){
+                            Console.WriteLine("*** VISITS LOGGED ***");
+                            foreach(Visit visit in _visits){
+                                Console.WriteLine(visit);
+                            }
                         }
                         break;
                 }
