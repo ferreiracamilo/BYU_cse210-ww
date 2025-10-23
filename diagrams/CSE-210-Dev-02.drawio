@@ -1,0 +1,202 @@
+<mxfile host="app.diagrams.net" modified="2023-04-28T01:41:46.863Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" etag="SWhzeBsOEEEAZoUG5YWc" version="21.2.3" type="google">
+  <diagram name="Página-1" id="rrA9re0o1Lf5HBQZPJvd">
+    <mxGraphModel dx="794" dy="708" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="lyQR7dfn_63zOgrAIOVA-5" value="Journal" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="370" y="60" width="160" height="164" as="geometry" />
+        </mxCell>
+        <mxCell id="lyQR7dfn_63zOgrAIOVA-6" value="+ _name: string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="lyQR7dfn_63zOgrAIOVA-5" vertex="1">
+          <mxGeometry y="26" width="160" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="lyQR7dfn_63zOgrAIOVA-22" value="+ _entries: List&amp;lt;Entry&amp;gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="lyQR7dfn_63zOgrAIOVA-5" vertex="1">
+          <mxGeometry y="52" width="160" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="lyQR7dfn_63zOgrAIOVA-7" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="lyQR7dfn_63zOgrAIOVA-5" vertex="1">
+          <mxGeometry y="78" width="160" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="lyQR7dfn_63zOgrAIOVA-8" value="+ Display(): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="lyQR7dfn_63zOgrAIOVA-5" vertex="1">
+          <mxGeometry y="86" width="160" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="lyQR7dfn_63zOgrAIOVA-23" value="+ SaveJournal(): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="lyQR7dfn_63zOgrAIOVA-5" vertex="1">
+          <mxGeometry y="112" width="160" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="lyQR7dfn_63zOgrAIOVA-24" value="+ LoadJournal(): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="lyQR7dfn_63zOgrAIOVA-5" vertex="1">
+          <mxGeometry y="138" width="160" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="lyQR7dfn_63zOgrAIOVA-13" value="Entry" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="10" y="20" width="300" height="164" as="geometry" />
+        </mxCell>
+        <mxCell id="lyQR7dfn_63zOgrAIOVA-17" value="+ _prompt: string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="lyQR7dfn_63zOgrAIOVA-13" vertex="1">
+          <mxGeometry y="26" width="300" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="lyQR7dfn_63zOgrAIOVA-14" value="+ _reply: string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="lyQR7dfn_63zOgrAIOVA-13" vertex="1">
+          <mxGeometry y="52" width="300" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="lyQR7dfn_63zOgrAIOVA-15" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="lyQR7dfn_63zOgrAIOVA-13" vertex="1">
+          <mxGeometry y="78" width="300" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="lyQR7dfn_63zOgrAIOVA-16" value="+ Entry()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="lyQR7dfn_63zOgrAIOVA-13" vertex="1">
+          <mxGeometry y="86" width="300" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="lyQR7dfn_63zOgrAIOVA-18" value="+ Entry(date: string, prompt: string, reply: string)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="lyQR7dfn_63zOgrAIOVA-13" vertex="1">
+          <mxGeometry y="112" width="300" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="lyQR7dfn_63zOgrAIOVA-20" value="+ RandomPrompt(): string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="lyQR7dfn_63zOgrAIOVA-13" vertex="1">
+          <mxGeometry y="138" width="300" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="lyQR7dfn_63zOgrAIOVA-27" value="Program" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="150" y="310" width="150" height="86" as="geometry" />
+        </mxCell>
+        <mxCell id="lyQR7dfn_63zOgrAIOVA-28" value="+ field: type" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="lyQR7dfn_63zOgrAIOVA-27" vertex="1">
+          <mxGeometry y="26" width="150" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="lyQR7dfn_63zOgrAIOVA-29" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="lyQR7dfn_63zOgrAIOVA-27" vertex="1">
+          <mxGeometry y="52" width="150" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="lyQR7dfn_63zOgrAIOVA-30" value="main: void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="lyQR7dfn_63zOgrAIOVA-27" vertex="1">
+          <mxGeometry y="60" width="150" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="lyQR7dfn_63zOgrAIOVA-31" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" parent="1" vertex="1">
+          <mxGeometry x="530" y="320" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="lyQR7dfn_63zOgrAIOVA-35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=-0.012;entryY=0.269;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="lyQR7dfn_63zOgrAIOVA-16" target="lyQR7dfn_63zOgrAIOVA-22" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lyQR7dfn_63zOgrAIOVA-36" value="" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=-0.038;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="lyQR7dfn_63zOgrAIOVA-27" target="lyQR7dfn_63zOgrAIOVA-24" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="380" y="290" as="sourcePoint" />
+            <mxPoint x="430" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lyQR7dfn_63zOgrAIOVA-37" value="" style="endArrow=none;html=1;rounded=0;exitX=0.167;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.51;entryY=1.038;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="lyQR7dfn_63zOgrAIOVA-27" target="lyQR7dfn_63zOgrAIOVA-20" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="380" y="290" as="sourcePoint" />
+            <mxPoint x="430" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lyQR7dfn_63zOgrAIOVA-40" value="" style="group" parent="1" vertex="1" connectable="0">
+          <mxGeometry x="330" y="396" width="180" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="lyQR7dfn_63zOgrAIOVA-39" value="" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="lyQR7dfn_63zOgrAIOVA-40" vertex="1">
+          <mxGeometry width="180" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="lyQR7dfn_63zOgrAIOVA-38" value="&lt;h1 style=&quot;font-size: 16px;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;Read Option&lt;/font&gt;&lt;/span&gt;&lt;/h1&gt;&lt;h1 style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial; font-weight: normal;&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;User provides the option according menu displayed and operation is performed. Menu is repeated until closing app&lt;/font&gt;&lt;/span&gt;&lt;br&gt;&lt;/h1&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="lyQR7dfn_63zOgrAIOVA-40" vertex="1">
+          <mxGeometry x="2" y="5" width="176" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="lyQR7dfn_63zOgrAIOVA-48" value="" style="group" parent="1" vertex="1" connectable="0">
+          <mxGeometry x="370" y="310" width="100" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="lyQR7dfn_63zOgrAIOVA-33" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;strokeWidth=2;shape=mxgraph.arrows2.arrow;dy=0.6;dx=40;notch=0;" parent="lyQR7dfn_63zOgrAIOVA-48" vertex="1">
+          <mxGeometry width="100" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="lyQR7dfn_63zOgrAIOVA-47" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;strokeWidth=2;shape=mxgraph.arrows2.arrow;dy=0.6;dx=40;notch=0;rotation=-180;" parent="lyQR7dfn_63zOgrAIOVA-48" vertex="1">
+          <mxGeometry y="38" width="100" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="lyQR7dfn_63zOgrAIOVA-54" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="lyQR7dfn_63zOgrAIOVA-49" target="lyQR7dfn_63zOgrAIOVA-50" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lyQR7dfn_63zOgrAIOVA-49" value="Write entry at menu" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.document2;whiteSpace=wrap;size=0.25;" parent="1" vertex="1">
+          <mxGeometry x="30" y="640" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="lyQR7dfn_63zOgrAIOVA-55" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="lyQR7dfn_63zOgrAIOVA-50" target="lyQR7dfn_63zOgrAIOVA-51" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lyQR7dfn_63zOgrAIOVA-50" value="Get Random prompt from Entry class with static method" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="160" y="630" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="lyQR7dfn_63zOgrAIOVA-56" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="lyQR7dfn_63zOgrAIOVA-51" target="lyQR7dfn_63zOgrAIOVA-52" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lyQR7dfn_63zOgrAIOVA-51" value="Ask User to write a reply to prompt" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="270" y="630" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="lyQR7dfn_63zOgrAIOVA-57" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="lyQR7dfn_63zOgrAIOVA-52" target="lyQR7dfn_63zOgrAIOVA-53" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lyQR7dfn_63zOgrAIOVA-52" value="Create a new Entry object with prompt and entry obtained" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="374" y="630" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="lyQR7dfn_63zOgrAIOVA-53" value="Add new entry to a Journal object" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="480" y="630" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="lyQR7dfn_63zOgrAIOVA-58" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="lyQR7dfn_63zOgrAIOVA-59" target="lyQR7dfn_63zOgrAIOVA-61" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lyQR7dfn_63zOgrAIOVA-59" value="Display" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.document2;whiteSpace=wrap;size=0.25;" parent="1" vertex="1">
+          <mxGeometry x="30" y="750" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="lyQR7dfn_63zOgrAIOVA-60" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="lyQR7dfn_63zOgrAIOVA-61" target="lyQR7dfn_63zOgrAIOVA-63" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lyQR7dfn_63zOgrAIOVA-61" value="Given previous entries stored at current execution" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="160" y="740" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="lyQR7dfn_63zOgrAIOVA-62" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="lyQR7dfn_63zOgrAIOVA-63" target="lyQR7dfn_63zOgrAIOVA-65" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lyQR7dfn_63zOgrAIOVA-63" value="Display method from Journal object is executed" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="270" y="740" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="lyQR7dfn_63zOgrAIOVA-65" value="Entries from Journal are displayed following template" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="374" y="740" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="lyQR7dfn_63zOgrAIOVA-67" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="lyQR7dfn_63zOgrAIOVA-68" target="lyQR7dfn_63zOgrAIOVA-70" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lyQR7dfn_63zOgrAIOVA-68" value="Load" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.document2;whiteSpace=wrap;size=0.25;" parent="1" vertex="1">
+          <mxGeometry x="30" y="860" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="lyQR7dfn_63zOgrAIOVA-69" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="lyQR7dfn_63zOgrAIOVA-70" target="lyQR7dfn_63zOgrAIOVA-72" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lyQR7dfn_63zOgrAIOVA-70" value="Given previous journal with entries created" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="160" y="850" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="lyQR7dfn_63zOgrAIOVA-71" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="lyQR7dfn_63zOgrAIOVA-72" target="lyQR7dfn_63zOgrAIOVA-74" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lyQR7dfn_63zOgrAIOVA-72" value="LoadJournal method from Journal object is executed" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="270" y="850" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="lyQR7dfn_63zOgrAIOVA-73" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="lyQR7dfn_63zOgrAIOVA-74" target="lyQR7dfn_63zOgrAIOVA-75" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lyQR7dfn_63zOgrAIOVA-74" value="Iterates over csv lines splitting them to create new Entry objects" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="374" y="850" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="lyQR7dfn_63zOgrAIOVA-75" value="New Entry objects are displayed at console" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="480" y="850" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="lyQR7dfn_63zOgrAIOVA-76" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="lyQR7dfn_63zOgrAIOVA-77" target="lyQR7dfn_63zOgrAIOVA-79" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lyQR7dfn_63zOgrAIOVA-77" value="Save" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.document2;whiteSpace=wrap;size=0.25;" parent="1" vertex="1">
+          <mxGeometry x="30" y="970" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="lyQR7dfn_63zOgrAIOVA-78" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="lyQR7dfn_63zOgrAIOVA-79" target="lyQR7dfn_63zOgrAIOVA-81" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lyQR7dfn_63zOgrAIOVA-79" value="Given previous journal with entries created" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="160" y="960" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="lyQR7dfn_63zOgrAIOVA-80" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="lyQR7dfn_63zOgrAIOVA-81" target="lyQR7dfn_63zOgrAIOVA-83" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lyQR7dfn_63zOgrAIOVA-81" value="SaveJournal&lt;br&gt;method from Journal object is executed" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="270" y="960" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="lyQR7dfn_63zOgrAIOVA-82" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="lyQR7dfn_63zOgrAIOVA-83" target="lyQR7dfn_63zOgrAIOVA-84" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lyQR7dfn_63zOgrAIOVA-83" value="Iterates over Journal.Entries objects and format for CSV" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="374" y="960" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="lyQR7dfn_63zOgrAIOVA-84" value="CSV file is created with entries information" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="480" y="960" width="80" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
